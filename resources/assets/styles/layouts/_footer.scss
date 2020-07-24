@@ -1,0 +1,36 @@
+.bd-footer {
+    .container-fluid {
+        .row {
+            .bd-footer-left {
+                .bd-footer-link {
+                    text-transform: uppercase;
+                    color: $bd-grey;
+                    transition: color ease-in-out 0.3s;
+                    &:hover {
+                        color: $bd-yellow;
+                        transition: color ease-in-out 0.3s;
+                    }
+                }
+                .bd-footer-social {
+                    display: inline;
+                    .share-icon-link {
+                        color: $bd-grey;
+                        transition: color ease-in-out 0.3s;
+                        &:hover {
+                            color: $bd-yellow;
+                            transition: color ease-in-out 0.3s;
+                        }
+                    }
+                }
+            }
+            .bd-footer-right {
+                .bd-copyright {
+                    display: inline;
+                }
+                .footer-logo {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

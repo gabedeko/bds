@@ -1,0 +1,153 @@
+.bd-hero {
+    height: 100vh;
+    .bd-hero-top {
+        height: 68%;
+        .bd-hero-top-left {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            .bd-hero-date {
+                padding: 16px;
+                border-top: 2px solid $bd-yellow;
+            }
+        }
+        .bd-hero-top-right {
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+    }
+    .bd-hero-btm {
+        height: 32%;
+        .bd-hero-btm-left {
+
+        }
+        .bd-hero-btm-right {
+
+        }
+    }
+}
+
+.bd-mod-1 {
+    height: 64vh;
+    .row {
+        height: 100%;
+        .bd-mod-1-item {
+            height: 100%;
+            .bd-mod-1-top {
+                height: 56%;
+                padding: 16px;
+                border-top: 2px solid $bd-green;
+                border-left: 2px solid transparent;
+                transition: border ease-in-out 0.3s;
+                position: relative;
+                .bd-mod-1-top-img {
+                    position: absolute;
+                    height: 89%;
+                    width: 89%;
+                    background-size: cover;
+                    background-position: 50% 25%;
+                    transition: margin 0.3s;
+                    margin-left: 0;
+                    transition: margin ease-in-out 0.3s;
+                }
+            }
+            .bd-mod-1-btm {
+                padding: 16px;
+                height: 44%;
+            }
+            &:hover {
+                .bd-mod-1-top {
+                    border-top: 2px solid transparent;
+                    border-left: 2px solid $bd-red;
+                    transition: border ease-in-out 0.3s;
+                    .bd-mod-1-top-img {
+                        margin-left: 8px;
+                        transition: margin ease-in-out 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bd-mod-2 {
+    height: 64vh;
+    .row {
+        height: 100%;
+        .bd-mod-2-left {
+            height: 100%;
+            .bd-mod-2-left-top {
+                padding: 16px;
+                height: 28%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .bd-mod-2-left-btm {
+                height: 72%;
+                padding: 16px;
+                border-right: 2px solid $bd-green;
+                border-top: 2px solid transparent;
+                transition: border ease-in-out 0.3s;
+                position: relative;
+                .bd-mod-2-left-img {
+                    position: absolute;
+                    height: 95%;
+                    width: 95%;
+                    background-size: cover;
+                    background-position: 50% 25%;
+                    margin-top: 0;
+                    transition: margin ease-in-out 0.3s;
+                }
+            }
+            &:hover {
+                .bd-mod-2-left-btm {
+                    border-right: 2px solid transparent;
+                    border-top: 2px solid $bd-red;
+                    transition: border ease-in-out 0.3s;
+                    .bd-mod-2-left-img {
+                        margin-top: -8px;
+                        transition: margin ease-in-out 0.3s;
+                    }
+                }
+            }
+        }
+        .bd-mod-2-right {
+            height: 100%;
+            .bd-mod-2-right-top {
+                height: 56%;
+                padding: 16px;
+                border-top: 2px solid $bd-green;
+                border-left: 2px solid transparent;
+                transition: border ease-in-out 0.3s;
+                position: relative;
+                .bd-mod-2-right-img {
+                    position: absolute;
+                    height: 89%;
+                    width: 89%;
+                    background-size: cover;
+                    background-position: 50% 25%;
+                    transition: margin 0.3s;
+                    margin-left: 0;
+                    transition: margin ease-in-out 0.3s;
+                }
+            }
+            .bd-mod-2-right-btm {
+                padding: 16px;
+                height: 44%;
+            }
+            &:hover {
+                .bd-mod-2-right-top {
+                    border-top: 2px solid transparent;
+                    border-left: 2px solid $bd-red;
+                    transition: border ease-in-out 0.3s;
+                    .bd-mod-2-right-img {
+                        margin-left: 8px;
+                        transition: margin ease-in-out 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
