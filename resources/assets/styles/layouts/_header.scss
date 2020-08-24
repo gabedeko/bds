@@ -86,9 +86,106 @@
       height: 100vh;
       border-left: 2px solid $bd-grey;
       position: fixed;
-      left: 96vw;
-      width: 3.5vw;
-    .bd-nav-icon {
-        
+      left: 92vw;
+      width: 6.5vw;
+      -webkit-transtition: width .3s ease-in-out, left .3s ease-in-out;
+      transition: width .3s ease-in-out, left .3s ease-in-out;
+      .bd-nav-icon {
+          
+        }
+      &.show {
+        transition: all ease-in-out .3s;
+        width: 19vw;
+        left: 80vw;
+        -webkit-transtition: width .3s ease-in-out, left .3s ease-in-out;
+        transition: width .3s ease-in-out, left .3s ease-in-out;
+        .bd-menu-item {
+          transform: translateX(0);
+          opacity: 1;
+          transition: opacity ease-in-out .3s, transform ease-in-out .3s;
+          text-align: center;
+          .bd-menu-link {
+            color: $bd-grey;
+            transition: color ease-in-out .3s;
+            &:hover {
+              color: $bd-yellow;
+              transition: color ease-in-out .3s;
+            }
+          }
+        }
+        .bd-menu-title {
+          .bd-menu-title-red {
+            color: $bd-red;
+            transition: color ease-in-out .3s;
+          }
+          .bd-menu-title-black {
+            color: $bd-grey;
+            transition: color ease-in-out .3s;
+          }
+          .bd-menu-title-green {
+            color: $bd-green;
+            transition: color ease-in-out .3s;
+          }
+          .bd-menu-title-yellow {
+            color: $bd-yellow;
+            transition: color ease-in-out .3s;
+          }
+        }
       }
+
+      .bd-menu-title {
+        text-transform: uppercase;
+        transform: rotate(90deg);
+        width: 400px;
+        position: absolute;
+        top: 50vh;
+        left: -160px;
+        span {
+          transition: color ease-in-out .3s;
+        }
+      }
+      .bd-menu-item {
+        transform: translateX(24px);
+        opacity: 0;
+        transition: opacity ease-in-out .3s, transform ease-in-out .3s;
+        text-align: center;
+        .bd-menu-link {
+          color: $bd-grey;
+          transition: color ease-in-out .3s;
+          &:hover {
+            color: $bd-yellow;
+            transition: color ease-in-out .3s;
+          }
+        }
+      }
+    &:hover {
+      .bd-menu-title {
+        .bd-menu-title-red {
+          color: $bd-red;
+          transition: color ease-in-out .3s;
+        }
+        .bd-menu-title-black {
+          color: $bd-grey;
+          transition: color ease-in-out .3s;
+        }
+        .bd-menu-title-green {
+          color: $bd-green;
+          transition: color ease-in-out .3s;
+        }
+        .bd-menu-title-yellow {
+          color: $bd-yellow;
+          transition: color ease-in-out .3s;
+        }
+      }
+    }
   }
+
+  .container-fluid {
+    padding-right: 8vw;
+    padding-left: 0.5vw;
+    transition: padding-right ease-in-out .3s;
+    &.show-nav {
+        padding-right: 19.8vw;
+        transition: padding-right ease-in-out .3s;
+    }
+}

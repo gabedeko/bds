@@ -2,17 +2,28 @@
     .container-fluid {
         .row {
             .bd-footer-left {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
                 .bd-footer-link {
                     text-transform: uppercase;
                     color: $bd-grey;
                     transition: color ease-in-out 0.3s;
+                    padding: 0 4px;
+                    text-align: center;
+                    align-self: center;
                     &:hover {
                         color: $bd-yellow;
                         transition: color ease-in-out 0.3s;
                     }
+                    @media (max-width: 767.98px) {
+                        font-size: 12px;
+                     }
                 }
                 .bd-footer-social {
                     display: inline;
+                    align-self: center;
+                    padding: 0 4px;
                     .share-icon-link {
                         color: $bd-grey;
                         transition: color ease-in-out 0.3s;
@@ -20,10 +31,16 @@
                             color: $bd-yellow;
                             transition: color ease-in-out 0.3s;
                         }
+                        @media (max-width: 767.98px) {
+                            font-size: 12px;
+                         }
                     }
                 }
             }
             .bd-footer-right {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
                 .bd-copyright {
                     display: inline;
                 }

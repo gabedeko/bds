@@ -1,0 +1,11 @@
+.slick-slider {
+    .slick-list {
+        height: 100%;
+        .slick-track {
+            height: 100%;
+        }
+    }
+    .slick-dots li button::before {
+        color: $bd-white;
+    }
+}

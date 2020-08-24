@@ -27,3 +27,28 @@ jQuery(document).ready(() => routes.loadEvents());
 $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
   $(this).toggleClass('open');
 });
+
+//Slick carousel
+$(document).ready(function(){
+  $('.multiple-items').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  });
+});
+
+//Click Menu Button
+$('#nav-icon3').click(function(){
+  if ($('#bd-navbar').hasClass( 'show' )) {
+    $('#bd-navbar').removeClass('show');
+    $('.container-fluid').removeClass('show-nav');
+  } else {
+    $('#bd-navbar').addClass('show');
+    $('.container-fluid').addClass('show-nav');
+  }
+});

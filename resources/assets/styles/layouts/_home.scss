@@ -1,5 +1,6 @@
 .bd-hero {
     height: 100vh;
+    margin: 0 0 24px 0;
     .bd-hero-top {
         height: 68%;
         .bd-hero-top-left {
@@ -10,26 +11,86 @@
             .bd-hero-date {
                 padding: 16px;
                 border-top: 2px solid $bd-yellow;
+                border-bottom: 2px solid transparent;
+                transition: all ease-in-out .3s;
+                .body-2 .fas {
+                    transition: color ease-in-out .3s;
+                }
             }
         }
         .bd-hero-top-right {
-            background-size: cover;
-            background-position: 50% 50%;
+                background-size: cover;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+            
+            .bd-hero-top-right-bg {
+                background-size: cover;
+                background-position: 50% 50%;
+            }
         }
     }
     .bd-hero-btm {
         height: 32%;
         .bd-hero-btm-left {
-
         }
         .bd-hero-btm-right {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            .hero-share {
+                padding: 8px;
+                h4 .hero-share-link .fab {
+                    color: $bd-grey;
+                    transition: color ease-in-out .3s;
+                }
+                &:hover {
+                    h4 .hero-share-link .fab {
+                        color: $bd-yellow;
+                        transition: color ease-in-out .3s;
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .bd-hero-top .bd-hero-top-left .bd-hero-date {
+            padding: 24px 16px 16px 16px;
+            border-top: 2px solid $bd-yellow;
+            border-bottom: 2px solid transparent;
+            transition: all ease-in-out .3s;
+            .body-2 .fas {
+                color: $bd-yellow;
+                transition: color ease-in-out .3s;
+            }
+        }
+    }
 
+    &.bd-contact {
+        height: 64vh;
+        .bd-hero-top {
+            height: 100%;
+            .bd-hero-top-left {
+                .bd-hero-date {
+                    h2 .fas, h3 .fas {
+                        transition: color ease-in-out .3s;
+                    }
+                }
+            }
+        }
+        &:hover {
+            .bd-hero-top .bd-hero-top-left .bd-hero-date {
+                h2 .fas, h3 .fas {
+                    color: $bd-yellow;
+                    transition: color ease-in-out .3s;
+                }
+            }
         }
     }
 }
 
 .bd-mod-1 {
     height: 64vh;
+    margin: 24px 0;
     .row {
         height: 100%;
         .bd-mod-1-item {
@@ -55,6 +116,12 @@
             .bd-mod-1-btm {
                 padding: 16px;
                 height: 44%;
+                .body-2 {
+                    .fas {
+                        color: $bd-grey;
+                        transition: color ease-in-out 0.3s;
+                    }
+                }
             }
             &:hover {
                 .bd-mod-1-top {
@@ -66,6 +133,14 @@
                         transition: margin ease-in-out 0.3s;
                     }
                 }
+                .bd-mod-1-btm {
+                    .body-2 {
+                        .fas {
+                            color: $bd-yellow;
+                            transition: color ease-in-out 0.3s;
+                        }
+                    }
+                }
             }
         }
     }
@@ -73,6 +148,7 @@
 
 .bd-mod-2 {
     height: 64vh;
+    margin: 24px 0;
     .row {
         height: 100%;
         .bd-mod-2-left {
@@ -83,6 +159,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                .body-2 .fas {
+                    color: $bd-grey;
+                    transition: color ease-in-out 0.3s;
+                }
             }
             .bd-mod-2-left-btm {
                 height: 72%;
@@ -102,10 +182,17 @@
                 }
             }
             &:hover {
+                .bd-mod-2-left-top {
+                    .body-2 .fas {
+                        color: $bd-yellow;
+                        transition: color ease-in-out 0.3s;
+                    }
+                }
                 .bd-mod-2-left-btm {
                     border-right: 2px solid transparent;
                     border-top: 2px solid $bd-red;
                     transition: border ease-in-out 0.3s;
+                    
                     .bd-mod-2-left-img {
                         margin-top: -8px;
                         transition: margin ease-in-out 0.3s;
@@ -136,6 +223,10 @@
             .bd-mod-2-right-btm {
                 padding: 16px;
                 height: 44%;
+                .body-2 .fas {
+                    color: $bd-grey;
+                    transition: color ease-in-out 0.3s;
+                }
             }
             &:hover {
                 .bd-mod-2-right-top {
@@ -147,7 +238,35 @@
                         transition: margin ease-in-out 0.3s;
                     }
                 }
+                .bd-mod-2-right-btm {
+                    .body-2 .fas {
+                        color: $bd-yellow;
+                        transition: color ease-in-out 0.3s;
+                    }
+                }
             }
+        }
+    }
+}
+
+.join-us-container, .patreon-container {
+    height: 40vh;
+    margin: 24px 0;
+    .row {
+        border-top: 2px solid $bd-grey;
+        height: 100%;
+        .join-us-left, .patreon-left {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .join-us-right, .patreon-right {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

@@ -1,0 +1,10 @@
+.bd-button-1 {
+    border-radius: 0;
+    border: 2px solid $bd-grey;
+    color: $bd-grey;
+    transition: border ease-in-out .3s;
+    &:hover {
+        border: 2px solid $bd-yellow;
+        transition: border ease-in-out .3s;
+    }
+}
