@@ -118,7 +118,7 @@
                 height: 44%;
                 .body-2 {
                     .fas {
-                        color: $bd-grey;
+                        color: $bd-tan;
                         transition: color ease-in-out 0.3s;
                     }
                 }
@@ -160,7 +160,7 @@
                 flex-direction: column;
                 justify-content: center;
                 .body-2 .fas {
-                    color: $bd-grey;
+                    color: $bd-tan;
                     transition: color ease-in-out 0.3s;
                 }
             }
@@ -224,7 +224,7 @@
                 padding: 16px;
                 height: 44%;
                 .body-2 .fas {
-                    color: $bd-grey;
+                    color: $bd-tan;
                     transition: color ease-in-out 0.3s;
                 }
             }
@@ -269,4 +269,36 @@
             align-items: center;
         }
     }
+}
+
+.hero-link {
+    color: $bd-tan;
+    transition: color ease-in-out .3s;
+    &:hover {
+        color: $bd-yellow;
+        transition: color ease-in-out .3s;
+    }
+}
+
+.announcement-container {
+    min-height: 25vh;
+    .row {
+        background-color: $bd-grey;
+        .announcement-left {
+            border-right: 1px solid $bd-tan;
+        }
+        .announcement-right {
+            border-left: 1px solid $bd-tan;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly; 
+            .announcement-right-top {
+                border-bottom: 1px solid $bd-tan;
+            }
+            .announcement-right-btm {
+                border-top: 1px solid $bd-tan;
+            }
+        }
+    }
+    
 }

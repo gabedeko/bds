@@ -6,11 +6,11 @@
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
             <div class="bd-hero-date">
-                <p class="body-2">○ July 19–25, 2012</p>
+                <p class="body-2"><i class="fas fa-circle"></i> July 19–25, 2012</p>
             </div>
         </div>
         <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_9.jpg'))">
-        ...
+        
         </div>
     </div>
     <div class="row bd-hero-btm">
@@ -18,7 +18,13 @@
             <h1>La La Land</h1>
         </div>
         <div class="col-md bd-hero-btm-right">
-            ...
+            <div class="hero-share">
+                <h4>SHARE:
+                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </h4>
+            </div>
         </div>
     </div>
 </div>
@@ -35,5 +41,6 @@
     </div>
   </div>
 </div>
+
 
 @endsection

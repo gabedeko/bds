@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+@while(have_posts()) @php the_post() @endphp
 <div class="bd-hero container-fluid mt-2">
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
@@ -9,13 +9,13 @@
                 <p class="body-2"><i class="fas fa-circle"></i> July 19–25, 2012</p>
             </div>
         </div>
-        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_9.jpg'))">
+        <div class="col-md-8 bd-hero-top-right" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)">
         
         </div>
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left">
-            <h1>La La Land</h1>
+            <h1><?php the_title(); ?></h1>
         </div>
         <div class="col-md bd-hero-btm-right">
             <div class="hero-share">
@@ -32,7 +32,7 @@
 <div class="container-fluid">
   <div class="row justify-content-md-center">
       <div class="col-md-8">
-        <p class="body-1"> Praesent bibendum ex augue, vel dictum diam vestibulum eu. Maecenas blandit nibh maximus, ultricies massa at, ullamcorper purus. Maecenas tincidunt fringilla dignissim. Cras dignissim eros urna, in pulvinar erat commodo at. Etiam pellentesque convallis blandit. Vestibulum sed ex massa. Donec ut dui sit amet nibh placerat volutpat. Morbi lorem est, ultrices vel semper sit amet, elementum sed velit. Nunc porttitor nisl ac nibh rutrum lobortis. Phasellus quis leo augue. Ut sed libero id metus tincidunt porta. Vivamus ut metus neque. Nam est eros, porttitor non nisl a, bibendum porttitor sem. Mauris nec diam nibh. Duis convallis hendrerit facilisis. Proin auctor euismod lorem.</p>
+        @include('partials.content-single-'.get_post_type())
       </div>
   </div>
   <div class="row mt-5 justify-content-md-center">
@@ -41,5 +41,5 @@
     </div>
   </div>
 </div>
-
+@endwhile
 @endsection

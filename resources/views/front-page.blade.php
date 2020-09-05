@@ -1,7 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="announcement-container container-fluid mt-3 mb-3">
+    <div class="row justify-content-md-center">
+        <div class="col-md-5 announcement-left mt-2 mb-2">
+            <h3>Announcements</h3>
+        </div>
+        <div class="col-md-5 announcement-right mt-2 mb-2">
+            <div class="announcement-right-top">
+            <p class="body-3">Vestibulum faucibus aliquam nunc, vitae tincidunt nisl volutpat eu. Proin tempus interdum odio ut luctus. Praesent blandit a leo ac vehicula. Nam pharetra ultrices odio, ac accumsan ex tristique nec. Sed eget arcu nec arcu consequat rutrum. Praesent sed aliquam quam.</p>
+            <p class="body-3">Phasellus posuere bibendum magna sed congue. Pellentesque nec dignissim nibh. In ornare rutrum viverra. Aenean sollicitudin dapibus lacus nec pellentesque. Aliquam sit amet blandit risus, ut venenatis quam. </p>
+            </div>
+            <div class="announcement-right-btm">
+                <h3>Next Episode</h3>
+                <p class="body-2">Thursday the 10th at 6PM on Youtube here</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
 <div class="bd-hero container-fluid mt-2">
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
@@ -10,14 +27,18 @@
             </div>
         </div>
         <div class="col-md-8 bd-hero-top-right multiple-items">
-                <div class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_20.jpg'))"></div>
-                <div class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_16.jpg'))"></div>
-                <div class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_12.jpg'))"></div>
+                <a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_6.jpg'))"></a>
+                <a href="/calendar" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_10.jpg'))"></a>
+                <a href="/blog-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_12.jpg'))"></a>
+                <a href="/about" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_5.jpg'))"></a>
         </div>
     </div>
     <div class="row bd-hero-btm">
-        <div class="col-md bd-hero-btm-left">
-            <h1>Misty Copeland Collection</h1>
+        <div class="col-md bd-hero-btm-left multiple-items-for">
+            <h1 class="hero-title"><a class="hero-link" href="/talk/talk-test">Interesting Talk Test</a></h1>
+            <h1 class="hero-title"><a class="hero-link" href="/calendar">Cool Calendar Test</a></h1>
+            <h1 class="hero-title"><a class="hero-link" href="/blog-test">Nice Blog Test</a></h1>
+            <h1 class="hero-title"><a class="hero-link" href="/about">Good About Test</a></h1>
         </div>
         <div class="col-md bd-hero-btm-right">
         </div>
@@ -29,7 +50,7 @@
   <div class="row">
     <a href="#" class="col-md-4 bd-mod-1-item">
       <div class="bd-mod-1-top">
-          <div class="bd-mod-1-top-img" style="background-image:url(@asset('images/placeholder/bd_placeholder_10.jpg'))"></div>
+          <div class="bd-mod-1-top-img" style="background-image:url(@asset('images/placeholder/bd_placeholder_20.jpg'))"></div>
       </div>
       <div class="bd-mod-1-btm">
           <p class="body-2"><i class="fas fa-circle"></i> March 20-22, 2020</p>
@@ -145,8 +166,11 @@
         </div>
         <div class="col-md join-us-right">
             <div class="join-us-right-input">
-                <input type="text" id="email" name="email" placeholder="enter email address"><br>
-                <label for="email">Email</label>
+            <?php
+                /*
+                    echo get_field( 'newsletter_signup' );
+                */
+            ?> 
             </div>
         </div>
     </div>

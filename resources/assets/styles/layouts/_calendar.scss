@@ -1,0 +1,49 @@
+.bd-calendar-header {
+    margin-top:24px;
+    height: 16vh;
+    .row {
+        height: 100%;
+        .col-md {
+            height: 100%;
+        }
+        .calendar-title-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+.calendar-container {
+    .row {
+        border-top: 1px solid $bd-grey;
+        height: 40vh;
+        .calendar-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 1px solid $bd-grey;
+            margin: 8px 0;
+            .calendar-item-btm {
+                height: 100%;
+                background-size:cover;
+                background-position:50% 50%;
+                transform: translateX(0%);
+                width: 80%;
+                transition: transform ease-in-out .3s;
+            }
+            &:hover {
+                .calendar-item-btm {
+                    transform: translateX(20%);
+                    transition: transform ease-in-out .3s;
+                }
+            }
+        }
+    }
+}
+
+.calendar-upcoming-title, .calendar-past-title {
+    .row {
+        border-top: 1px solid $bd-grey;
+    }
+}
