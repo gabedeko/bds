@@ -1,10 +1,11 @@
 .bd-btn-1 {
     border-radius: 0;
-    border: 2px solid $bd-grey;
-    color: $bd-grey;
+    border: 2px solid $bd-yellow;
+    color: $bd-tan;
     transition: border ease-in-out .3s;
     &:hover {
-        border: 2px solid $bd-yellow;
+        border: 2px solid $bd-green;
+        color: $bd-tan;
         transition: border ease-in-out .3s;
     }
 }

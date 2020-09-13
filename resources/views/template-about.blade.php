@@ -26,7 +26,7 @@
         <div class="col-md-4 bd-hero-top-left">
         <div class="bd-hero-date"></div>
         </div>
-        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_11.jpg'))">
+        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_28.jpg'))">
         
         </div>
     </div>

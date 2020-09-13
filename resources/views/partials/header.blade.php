@@ -12,19 +12,19 @@
 */ ?>
 <script src="https://kit.fontawesome.com/bd3a83b12b.js" crossorigin="anonymous"></script>
 <div id="bd-navbar" class="bd-navbar">
-  <div class="bd-nav-icon" style="background-image:url(@asset('images/logo/bds_logo.jpg'))" >
 
-  </div>
+  <a href="/"><div class="bd-nav-icon" style="background-image:url(@asset('images/logo/bds_logo.jpg'))" ></div></a>
+
   <div id="nav-icon3" class="bd-nav-icon">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <h3 class="bd-menu-item"><a href="#" class="bd-menu-link">Episodes</a></h3>
+  <h3 class="bd-menu-item"><a href="/episodes" class="bd-menu-link">Episodes</a></h3>
   <h3 class="bd-menu-item"><a href="/calendar" class="bd-menu-link">Calendar</a></h3>
-  <h3 class="bd-menu-item"><a href="#" class="bd-menu-link">Your Stories</a></h3>
-  <h3 class="bd-menu-item"><a href="#" class="bd-menu-link">Artists</a></h3>
+  <h3 class="bd-menu-item"><a href="/stories" class="bd-menu-link">Your Stories</a></h3>
+  <h3 class="bd-menu-item"><a href="/artists" class="bd-menu-link">Artists</a></h3>
   <h3 class="bd-menu-item"><a href="/about" class="bd-menu-link">About</a></h3>
   <h3 class="bd-menu-item"><a href="/contact" class="bd-menu-link">Contact</a></h3>
   <?php /*
@@ -38,4 +38,35 @@
         <a class="share-icon-link" href="#"><i class="fab fa-vimeo-v"></i></a>
   </div>
 </div>
+
+<nav class="bd-mobile-navbar fixed-top navbar ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img class="navbar-logo" src="@asset('images/logo/bds_logo.jpg')"></a>
+    <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/episodes">Episodes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/stories">Your Stories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/artists">Artists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 

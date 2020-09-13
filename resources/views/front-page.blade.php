@@ -1,15 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="announcement-container container-fluid mt-3 mb-3">
+
+<?php
+//Check if "show announcement" checkbox is checked
+$show_newsletter = get_field('show');
+if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
+    <div class="announcement-container container-fluid mt-3 mb-3">
     <div class="row justify-content-md-center">
         <div class="col-md-5 announcement-left mt-2 mb-2">
             <h3>Announcements</h3>
         </div>
         <div class="col-md-5 announcement-right mt-2 mb-2">
             <div class="announcement-right-top">
-            <p class="body-3">Vestibulum faucibus aliquam nunc, vitae tincidunt nisl volutpat eu. Proin tempus interdum odio ut luctus. Praesent blandit a leo ac vehicula. Nam pharetra ultrices odio, ac accumsan ex tristique nec. Sed eget arcu nec arcu consequat rutrum. Praesent sed aliquam quam.</p>
-            <p class="body-3">Phasellus posuere bibendum magna sed congue. Pellentesque nec dignissim nibh. In ornare rutrum viverra. Aenean sollicitudin dapibus lacus nec pellentesque. Aliquam sit amet blandit risus, ut venenatis quam. </p>
+                <p>
+                    <?php
+                        echo get_field( 'announcement' );
+                    ?>
+                </p>
             </div>
             <div class="announcement-right-btm">
                 <h3>Next Episode</h3>
@@ -19,6 +27,10 @@
         </div>
     </div>
 </div>
+<?php
+}
+?>
+
 <div class="bd-hero container-fluid mt-2">
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
@@ -167,10 +179,8 @@
         <div class="col-md join-us-right">
             <div class="join-us-right-input">
             <?php
-                /*
                     echo get_field( 'newsletter_signup' );
-                */
-            ?> 
+            ?>
             </div>
         </div>
     </div>

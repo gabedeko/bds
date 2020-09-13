@@ -60,3 +60,11 @@ $('#nav-icon3').click(function(){
     $('.container-fluid').addClass('show-nav');
   }
 });
+
+$('#navbar-toggler').click(function(){
+  if ($('#navbarNav').hasClass( 'show' )) {
+    $('#navbarNav').removeClass('show');
+  } else {
+    $('#navbarNav').addClass('show');
+  }
+});

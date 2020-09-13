@@ -1,0 +1,26 @@
+.stories-container {
+    .stories-row {
+        border-top: 2px solid $bd-grey;
+        min-height: 40vh;
+        padding: 8px 0;
+        .stories-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0 24px;
+        }
+        .stories-right {
+           .stories-img {
+            height:100%;
+            width:100%;
+            background-size:cover;
+            background-position:50%50%;
+            background-repeat:no-repeat;
+           }
+        }
+    }
+
+    .stories-form-row {
+        min-height: 100vh;
+    }
+}

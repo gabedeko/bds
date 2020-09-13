@@ -110,7 +110,8 @@ function wpse242371_remove_editor_from_some_pages()
         'template-home.blade.php',
         'template-custom.blade.php',
         'template-blog.blade.php',
-        'template-bio.blade.php'
+        'template-bio.blade.php',
+        'front-page.blade.php'
     );
 
     if( in_array($current_page_template_slug, $excluded_template_slugs) ) {
@@ -126,7 +127,7 @@ function wpse242371_remove_editor_from_some_pages()
 add_action('admin_enqueue_scripts', 'wpse242371_remove_editor_from_some_pages');
 
 add_action( 'init', function() {
-    remove_post_type_support( 'film', 'editor' );
+    remove_post_type_support( 'story', 'editor' );
     remove_post_type_support('post', 'editor');
     remove_post_type_support('team', 'editor');
 }, 99);
