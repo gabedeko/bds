@@ -9,3 +9,16 @@
         transition: border ease-in-out .3s;
     }
 }
+
+.bd-btn-2 {
+    border-radius: 0;
+    border: 2px solid $bd-black;
+    color: $bd-black;
+    transition: background-color ease-in-out .3s, color ease-in-out .3s;
+    &:hover {
+        border: 2px solid $bd-black;
+        background-color: $bd-black;
+        color: $bd-tan;
+        transition: background-color ease-in-out .3s, color ease-in-out .3s;
+    }
+}

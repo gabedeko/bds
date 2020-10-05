@@ -92,7 +92,7 @@
 }
 
 .bd-mod-1 {
-    height: 64vh;
+    min-height: 64vh;
     margin: 24px 0;
     .row {
         height: 100%;
@@ -103,7 +103,7 @@
                 height: 48vh;
             }
             .bd-mod-1-top {
-                height: 56%;
+                height: 40vh;
                 padding: 16px;
                 border-top: 2px solid $bd-green;
                 border-left: 2px solid transparent;
@@ -146,6 +146,58 @@
                             color: $bd-yellow;
                             transition: color ease-in-out 0.3s;
                         }
+                    }
+                }
+            }
+        }
+        .bd-mod-2-left {
+            height: 100%;
+            @media (max-width: 767.98px) {
+                height: 48vh;
+            }
+            .bd-mod-2-left-top {
+                padding: 16px;
+                height: 28%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .body-2 .fas {
+                    color: $bd-tan;
+                    transition: color ease-in-out 0.3s;
+                }
+            }
+            .bd-mod-2-left-btm {
+                height: 40vh;
+                padding: 16px;
+                border-right: 2px solid $bd-green;
+                border-top: 2px solid transparent;
+                transition: border ease-in-out 0.3s;
+                position: relative;
+                .bd-mod-2-left-img {
+                    position: absolute;
+                    height: 95%;
+                    width: 95%;
+                    background-size: cover;
+                    background-position: 50% 25%;
+                    margin-top: 0;
+                    transition: margin ease-in-out 0.3s;
+                }
+            }
+            &:hover {
+                .bd-mod-2-left-top {
+                    .body-2 .fas {
+                        color: $bd-yellow;
+                        transition: color ease-in-out 0.3s;
+                    }
+                }
+                .bd-mod-2-left-btm {
+                    border-right: 2px solid transparent;
+                    border-top: 2px solid $bd-red;
+                    transition: border ease-in-out 0.3s;
+                    
+                    .bd-mod-2-left-img {
+                        margin-top: -8px;
+                        transition: margin ease-in-out 0.3s;
                     }
                 }
             }

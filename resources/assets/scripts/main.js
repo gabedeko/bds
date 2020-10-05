@@ -30,6 +30,13 @@ $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
 
 //Slick carousel
 $(document).ready(function(){
+  $('.bd-hero-date').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.multiple-items',
+  });
   $('.multiple-items-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -43,11 +50,12 @@ $(document).ready(function(){
     speed: 500,
     fade: true,
     cssEase: 'linear',
-    asNavFor: '.multiple-items-for',
+    asNavFor: '.multiple-items-for, .bd-hero-date',
     arrows: false,
     autoplay: true,
     autoplaySpeed: 5000,
   });
+  
 });
 
 //Click Menu Button

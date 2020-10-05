@@ -130,7 +130,20 @@ add_action( 'init', function() {
     remove_post_type_support( 'story', 'editor' );
     remove_post_type_support('post', 'editor');
     remove_post_type_support('team', 'editor');
+    remove_post_type_support('artist', 'editor');
 }, 99);
 
 //Remove Gutenburg Editor
 add_filter('use_block_editor_for_post', '__return_false', 10);
+
+function truncate($string,$length=100,$append="&hellip;") {
+    $string = trim($string);
+  
+    if(strlen($string) > $length) {
+      $string = wordwrap($string, $length);
+      $string = explode("\n", $string, 2);
+      $string = $string[0] . $append;
+    }
+  
+    return $string;
+  }

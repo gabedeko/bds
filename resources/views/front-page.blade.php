@@ -2,6 +2,19 @@
 
 @section('content')
 
+<?php 
+ $args_0 = array( 
+    'orderby' => 'ID',
+    'post_type' =>array('talk'),
+    'post_status' => 'publish',
+    'posts_per_page' => 20,
+ );
+ $the_query_0 = new WP_Query( $args_0 );
+
+ $query_item_num_1 = 0;
+
+?>
+
 <?php
 //Check if "show announcement" checkbox is checked
 $show_newsletter = get_field('show');
@@ -35,22 +48,25 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
             <div class="bd-hero-date">
-                <p class="body-2"><i class="fas fa-circle"></i> January 19–25, 2008</p>
+                <p class="body-2"><i class="fas fa-circle"></i> January 25, 2018</p>
+                <p class="body-2"><i class="fas fa-circle"></i> February 19, 2020</p>
+                <p class="body-2"><i class="fas fa-circle"></i> March 10, 2020</p>
+                <p class="body-2"><i class="fas fa-circle"></i> April 30, 2020</p>
             </div>
         </div>
         <div class="col-md-8 bd-hero-top-right multiple-items">
-                <a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_6.jpg'))"></a>
+                <a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_8.jpg'))"></a>
                 <a href="/calendar" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_10.jpg'))"></a>
-                <a href="/blog-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_12.jpg'))"></a>
-                <a href="/about" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_5.jpg'))"></a>
+                <a href="/blog-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_25.jpg'))"></a>
+                <a href="/about" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_33.jpg'))"></a>
         </div>
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left multiple-items-for">
-            <h1 class="hero-title"><a class="hero-link" href="/talk/talk-test">Interesting Talk Test</a></h1>
-            <h1 class="hero-title"><a class="hero-link" href="/calendar">Cool Calendar Test</a></h1>
-            <h1 class="hero-title"><a class="hero-link" href="/blog-test">Nice Blog Test</a></h1>
-            <h1 class="hero-title"><a class="hero-link" href="/about">Good About Test</a></h1>
+            <h1 class="hero-title"><a class="hero-link" href="/talk/talk-test">Interesting Talk</a></h1>
+            <h1 class="hero-title"><a class="hero-link" href="/calendar">Cool Calendar</a></h1>
+            <h1 class="hero-title"><a class="hero-link" href="/blog-test">Nice Blog</a></h1>
+            <h1 class="hero-title"><a class="hero-link" href="/about">Good Stuff</a></h1>
         </div>
         <div class="col-md bd-hero-btm-right">
         </div>
@@ -60,6 +76,24 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
 
 <div class="bd-mod-1 container-fluid mb-3">
   <div class="row">
+  <?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
+?>
+    <a href="<?php the_permalink(); ?>" class="col-md-4 bd-mod-1-item">
+      <div class="bd-mod-1-top">
+          <div class="bd-mod-1-top-img" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)"></div>
+      </div>
+      <div class="bd-mod-1-btm">
+          <p class="body-2"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></p>
+          <p class="body-1"><?php the_title(); ?></p>
+      </div>
+    </a>
+
+<?php 
+$query_item_num_1++;
+?>
+<?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+<?php wp_reset_query(); ?>
+<?php /*
     <a href="#" class="col-md-4 bd-mod-1-item">
       <div class="bd-mod-1-top">
           <div class="bd-mod-1-top-img" style="background-image:url(@asset('images/placeholder/bd_placeholder_20.jpg'))"></div>
@@ -69,27 +103,20 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
           <p class="body-1">Janet Collins, Steeple Chase</p>
       </div>
     </a>
-    <a href="#" class="col-md-4 bd-mod-1-item">
-      <div class="bd-mod-1-top">
-        <div class="bd-mod-1-top-img" style="background-image:url(@asset('images/placeholder/bd_placeholder_3.jpg'))"></div>
-      </div>
-      <div class="bd-mod-1-btm">
-          <p class="body-2"><i class="fas fa-circle"></i> February 1-4, 2020</p>
-          <p class="body-1">John W. Bubbles, American Dancer</p>
-      </div>
-    </a>
-    <a href="#" class="col-md-4 bd-mod-1-item">
-      <div class="bd-mod-1-top">
-        <div class="bd-mod-1-top-img" style="background-image:url(@asset('images/placeholder/bd_placeholder_31.jpg'))"></div>    
-      </div>
-      <div class="bd-mod-1-btm">
-          <p class="body-2"><i class="fas fa-circle"></i> June 15, 2020</p>
-          <p class="body-1">Katherine Dunham, Well Look</p>
-      </div>
-    </a>
+    <div class="col-md-8 bd-mod-2-left">
+            <div class="bd-mod-2-left-top">
+                <p class="body-2"><i class="fas fa-circle"></i> May 27-30, 2011</p>
+                <p class="body-1">Rhapsody James, Alrighty</p>
+            </div>
+            <div class="bd-mod-2-left-btm">
+                <div class="bd-mod-2-left-img" style="background-image:url(@asset('images/placeholder/bd_placeholder_25.jpg'))"></div>
+            </div>
+        </div>
   </div>
+*/ ?>
 </div>
 
+<?php /*
 <div class="bd-mod-2 container-fluid">
     <div class="row">
         <div class="col-md-8 bd-mod-2-left">
@@ -169,6 +196,7 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
     </a>
   </div>
 </div>
+*/ ?>
 
 <div class="container-fluid join-us-container">
     <div class="row">

@@ -26,7 +26,7 @@
         <div class="col-md-4 bd-hero-top-left">
         <div class="bd-hero-date"></div>
         </div>
-        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_28.jpg'))">
+        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_32.jpg'))">
         
         </div>
     </div>
@@ -66,14 +66,32 @@
     $instagram = get_field('instagram');
     $facebook = get_field('facebook');
     $linkedin = get_field('linkedin');
+    $desc = get_field('description');
+    //Crop description at whitespace
+    $desc_length = strlen($desc);
+    $maxDescLength = 340;
+    
+
+    $title = get_field('team_title');
   ?>
  
     <div class="col-md-4 bd-team-item">
         <div class="bd-team-item-background" style="background-image:url(<?php echo $photo['url']; ?>)">
             <div class="bd-team-item-shade">
                 <h3 class="bd-team-item-name"><?php echo get_field('name'); ?></h3>
-                <h4 class="bd-team-item-title"><?php echo get_field('team_title'); ?></h4>
-                <p class="bd-team-item-desc body-3"><?php echo get_field('description'); ?></p>
+                <h4 class="bd-team-item-title"><?php echo $title; ?></h4>
+                <p class="bd-team-item-desc body-3">
+                <?php
+                //Crop description at whitespace - Line 70
+                if ($desc_length > $maxDescLength) {
+                    echo substr($desc, 0, strrpos($desc, ' ', $maxDescLength-$desc_length));
+                    echo "...";
+                } else {
+                    echo $thestring;
+                }
+                ?>
+                </p>
+                <a href="<?php the_permalink(); ?>" type="button" class="btn bd-btn-2">More</a>
                 <div class="bd-team-item-social">
                 <?php if ($twitter != null){?>
                     <a class="share-icon-link team-share-icon-link" href="#"><i class="fab fa-twitter"></i></a>
@@ -104,7 +122,7 @@
 
 
     
-
+    <?php /*
     <div class="col-md-4 bd-team-item">
         <div class="bd-team-item-background" style="background-image:url(@asset('images/placeholder/bd_placeholder_1.jpg'))">
             <div class="bd-team-item-shade">
@@ -114,47 +132,7 @@
                 <p class="bd-team-item-social">Social</p>
             </div>
         </div>
-    </div>
-    <div class="col-md-4 bd-team-item">
-        <div class="bd-team-item-background" style="background-image:url(@asset('images/placeholder/bd_placeholder_15.jpg'))">
-            <div class="bd-team-item-shade">
-                <h3 class="bd-team-item-name">Name</h3>
-                <h4 class="bd-team-item-title">Title</h4>
-                <p class="bd-team-item-desc body-3">Description</p>
-                <p class="bd-team-item-social">Social</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 bd-team-item">
-        <div class="bd-team-item-background" style="background-image:url(@asset('images/placeholder/bd_placeholder_21.jpg'))">
-            <div class="bd-team-item-shade">
-                <h3 class="bd-team-item-name">Name</h3>
-                <h4 class="bd-team-item-title">Title</h4>
-                <p class="bd-team-item-desc body-3">Description</p>
-                <p class="bd-team-item-social">Social</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 bd-team-item">
-        <div class="bd-team-item-background" style="background-image:url(@asset('images/placeholder/bd_placeholder_16.jpg'))">
-            <div class="bd-team-item-shade">
-                <h3 class="bd-team-item-name">Name</h3>
-                <h4 class="bd-team-item-title">Title</h4>
-                <p class="bd-team-item-desc body-3">Description</p>
-                <p class="bd-team-item-social">Social</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 bd-team-item">
-        <div class="bd-team-item-background" style="background-image:url(@asset('images/placeholder/bd_placeholder_13.jpg'))">
-            <div class="bd-team-item-shade">
-                <h3 class="bd-team-item-name">Name</h3>
-                <h4 class="bd-team-item-title">Title</h4>
-                <p class="bd-team-item-desc body-3">Description</p>
-                <p class="bd-team-item-social">Social</p>
-            </div>
-        </div>
-    </div>
+    </div> */ ?>
   </div>
 </div>
 

@@ -20,6 +20,15 @@
   </div>
   <div class="container-fluid contact-container">
     <div class="row justify-content-end">
+      <div class="col-4 d-flex align-items-center justify-content-center">
+        <div class="bd-contact-info">
+          <h3>Black Dance Stories</h3>
+          <p>2380 Paddock Way, 11111 Brooklyn, NY</p>
+          <p>Email: <a href="mailto:blackdancestories@gmail.com">blackdancestories@gmail.com</a></p>
+          <p>Fax: (111) 111-1111</p>
+        </div>
+        
+      </div>
       <div class="col-8">
         @include('partials.content-page')
       </div>

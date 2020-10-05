@@ -23,8 +23,17 @@
                     color: $bd-black;
                 }
                 .bd-artists-item-social {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
                     .artists-share-icon-link {
                         color: $bd-black;
+                        transition: color ease-in-out .3s;
+                        &:hover {
+                            color: $bd-yellow;
+                            transition: color ease-in-out .3s;
+                        }
                     }
                 }
             }

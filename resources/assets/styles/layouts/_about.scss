@@ -23,8 +23,17 @@
                     color: $bd-black;
                 }
                 .bd-team-item-social {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
                     .team-share-icon-link {
                         color: $bd-black;
+                        transition: color ease-in-out .3s;
+                        &:hover {
+                            color: $bd-yellow;
+                            transition: color ease-in-out .3s;
+                        }
                     }
                 }
             }
