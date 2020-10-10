@@ -13,7 +13,7 @@
 <script src="https://kit.fontawesome.com/bd3a83b12b.js" crossorigin="anonymous"></script>
 <div id="bd-navbar" class="bd-navbar">
 
-  <a href="/"><div class="bd-nav-icon" style="background-image:url(@asset('images/logo/bds_logo.jpg'))" ></div></a>
+  <a href="/"><div class="bd-nav-icon" style="background-image:url(@asset('images/logo/bds_banner_logo.jpg'))" ></div></a>
 
   <div id="nav-icon3" class="bd-nav-icon">
     <span></span>
