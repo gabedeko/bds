@@ -47,7 +47,11 @@
 </div>
 
 <div class="container-fluid">
-    <div class="row mt-5 justify-content-md-center">
+    <div class="row mb-5 justify-content-md-center">
+        <?php
+                $video_type = get_field('video_type');
+                $video_id = get_field('video_id');
+        ?>
         <div class="col-md-10">
 
         <?php if ($video_type == 'youtube'){ ?>
@@ -68,8 +72,6 @@
   <?php
     //Check if "show announcement" checkbox is checked
     $image = get_field('image');
-    $video_type = get_field('video_type');
-    $video_id = get_field('video_id');
     if($image){ ?>
     <div class="col-md-6 talk-image-2">
         <img src="<?php echo $image['url'] ?>" alt="">

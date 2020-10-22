@@ -13,7 +13,12 @@
 <script src="https://kit.fontawesome.com/bd3a83b12b.js" crossorigin="anonymous"></script>
 <div id="bd-navbar" class="bd-navbar">
 
-  <a href="/"><div class="bd-nav-icon" style="background-image:url(@asset('images/logo/bds_banner_logo.jpg'))" ></div></a>
+  <a href="/">
+    <img class="bad-nav-icon-img-tag" src="@asset('images/logo/bds_banner_logo.jpg')" alt="">
+    <?php /*
+    <div class="bd-nav-icon" style="background-image:url(@asset('images/logo/bds_banner_logo.jpg'))" ></div>
+    */ ?>
+  </a>
 
   <div id="nav-icon3" class="bd-nav-icon">
     <span></span>
@@ -22,9 +27,12 @@
     <span></span>
   </div>
   <h3 class="bd-menu-item"><a href="/episodes" class="bd-menu-link">Episodes</a></h3>
+  <?php /*
   <h3 class="bd-menu-item"><a href="/calendar" class="bd-menu-link">Calendar</a></h3>
+  */ ?>
   <h3 class="bd-menu-item"><a href="/stories" class="bd-menu-link">Your Stories</a></h3>
   <h3 class="bd-menu-item"><a href="/artists" class="bd-menu-link">Artists</a></h3>
+  <h3 class="bd-menu-item"><a href="/we-name-the-names" class="bd-menu-link">Name the Names</a></h3>
   <h3 class="bd-menu-item"><a href="/about" class="bd-menu-link">About</a></h3>
   <h3 class="bd-menu-item"><a href="/contact" class="bd-menu-link">Contact</a></h3>
   <?php /*
@@ -50,14 +58,19 @@
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/episodes">Episodes</a>
         </li>
+        <?php /*
         <li class="nav-item">
           <a class="nav-link" href="/calendar">Calendar</a>
         </li>
+        */ ?>
         <li class="nav-item">
           <a class="nav-link" href="/stories">Your Stories</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="/artists">Artists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/we-name-the-names">Name the Names</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="/about">About</a>

@@ -6,6 +6,21 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
+  <?php 
+ $args_0 = array( 
+    'orderby' => 'ID',
+    'post_type' =>array('talk'),
+    'post_status' => 'publish',
+    'posts_per_page' => 30,
+    "orderby" => "date",
+    "order" => 'DESC',
+ );
+ $the_query_0 = new WP_Query( $args_0 );
+
+ $query_item_num_1 = 0;
+
+?>
+
     <div class="bd-hero bd-contact container-fluid mt-2">
       <div class="row bd-hero-top">
           <div class="col-md-4 bd-hero-top-left">
@@ -19,8 +34,42 @@
     </div>
     @include('partials.content-page')
 
+<div class="container-fluid episodes-container">
+<?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
+?>
+    <?php 
+    $content = get_the_content();
+    $content_length = strlen($content);
+    $maxContentLength = 280;
+    ?>
+    <a href="<?php the_permalink(); ?>" class="row episodes-row">
+        <div class="col-md episodes-left">
+            <h3 class="episodes-title"><?php the_title(); ?></h3>
+            <h5 class="episodes-date"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></h5>
+            <p class="episodes-desc">
+            <?php
+             //Crop content at whitespace - Line 70
+             if ($content_length > $maxContentLength) {
+                echo substr($content, 0, strrpos($content, ' ', $maxContentLength-$content_length));
+                echo "...";
+            } else {
+                echo $content;
+            }
+            ?>
+            </p>
+        </div>
+        <div class="col-md episodes-right" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)">
 
-    <div class="container-fluid episodes-container">
+        </div>
+    </a>
+
+        <?php 
+        $query_item_num_1++;
+        ?>
+        <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+        <?php wp_reset_query(); ?>
+
+        <?php /*
         <div class="row episodes-row">
             <div class="col-md episodes-left">
                 <h3 class="episodes-title">Title</h3>
@@ -31,36 +80,7 @@
 
             </div>
         </div>
-        <div class="row episodes-row">
-            <div class="col-md episodes-left">
-                <h3 class="episodes-title">Title</h3>
-                <h5 class="episodes-date">Date</h5>
-                <p class="episodes-desc">Phasellus condimentum dui et convallis iaculis. Nulla imperdiet sapien tincidunt odio consequat, a sollicitudin nisi fringilla. In quis suscipit mi. Aenean id enim varius, gravida risus in, egestas eros. Duis dolor lectus, scelerisque a eros ut, vulputate tempus sapien. Suspendisse interdum tempor cursus. Aenean aliquam luctus diam congue iaculis. </p>
-            </div>
-            <div class="col-md episodes-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_7.jpg'))">
-
-            </div>
-        </div>
-        <div class="row episodes-row">
-            <div class="col-md episodes-left">
-                <h3 class="episodes-title">Title</h3>
-                <h5 class="episodes-date">Date</h5>
-                <p class="episodes-desc">Phasellus condimentum dui et convallis iaculis. Nulla imperdiet sapien tincidunt odio consequat, a sollicitudin nisi fringilla. In quis suscipit mi. Aenean id enim varius, gravida risus in, egestas eros. Duis dolor lectus, scelerisque a eros ut, vulputate tempus sapien. Suspendisse interdum tempor cursus. Aenean aliquam luctus diam congue iaculis. </p>
-            </div>
-            <div class="col-md episodes-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_9.jpg'))">
-
-            </div>
-        </div>
-        <div class="row episodes-row">
-            <div class="col-md episodes-left">
-                <h3 class="episodes-title">Title</h3>
-                <h5 class="episodes-date">Date</h5>
-                <p class="episodes-desc">Phasellus condimentum dui et convallis iaculis. Nulla imperdiet sapien tincidunt odio consequat, a sollicitudin nisi fringilla. In quis suscipit mi. Aenean id enim varius, gravida risus in, egestas eros. Duis dolor lectus, scelerisque a eros ut, vulputate tempus sapien. Suspendisse interdum tempor cursus. Aenean aliquam luctus diam congue iaculis. </p>
-            </div>
-            <div class="col-md episodes-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_6.jpg'))">
-
-            </div>
-        </div>
-    </div>
+        */ ?>
+</div>
   @endwhile
 @endsection

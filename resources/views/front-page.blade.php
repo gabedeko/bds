@@ -3,17 +3,38 @@
 @section('content')
 
 <?php 
+//Query for loop under slide
  $args_0 = array( 
     'orderby' => 'ID',
     'post_type' =>array('talk'),
     'post_status' => 'publish',
-    'posts_per_page' => 20,
+    'posts_per_page' => 6,
+    'offset' => 3,
+    "orderby" => "date",
+    "order" => 'DESC',
  );
  $the_query_0 = new WP_Query( $args_0 );
+
+ $query_item_num_0 = 0;
+
+//Query for slide
+$args_1 = array( 
+    'orderby' => 'ID',
+    'post_type' =>array('talk'),
+    'post_status' => 'publish',
+    'posts_per_page' => 3,
+    "orderby" => "date",
+    "order" => 'DESC',
+ );
+ $the_query_1 = new WP_Query( $args_1 );
 
  $query_item_num_1 = 0;
 
 ?>
+
+
+
+
 
 <?php
 //Check if "show announcement" checkbox is checked
@@ -48,25 +69,29 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
             <div class="bd-hero-date">
-                <p class="body-2"><i class="fas fa-circle"></i> January 25, 2018</p>
-                <p class="body-2"><i class="fas fa-circle"></i> February 19, 2020</p>
-                <p class="body-2"><i class="fas fa-circle"></i> March 10, 2020</p>
-                <p class="body-2"><i class="fas fa-circle"></i> April 30, 2020</p>
+            <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post(); ?>
+                <p class="body-2"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></p>
+            <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+            <?php wp_reset_query(); ?>
+                <?php /*<p class="body-2"><i class="fas fa-circle"></i> January 25, 2018</p>*/ ?>
             </div>
         </div>
         <div class="col-md-8 bd-hero-top-right multiple-items">
-                <a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_8.jpg'))"></a>
-                <a href="/calendar" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_10.jpg'))"></a>
-                <a href="/blog-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_25.jpg'))"></a>
-                <a href="/about" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_33.jpg'))"></a>
+            <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post(); ?>
+                <a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)"></a>
+            <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+            <?php wp_reset_query(); ?>
+                <?php /*<a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_8.jpg'))"></a> */ ?>
         </div>
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left multiple-items-for">
-            <h1 class="hero-title"><a class="hero-link" href="/talk/talk-test">Interesting Talk</a></h1>
-            <h1 class="hero-title"><a class="hero-link" href="/calendar">Cool Calendar</a></h1>
-            <h1 class="hero-title"><a class="hero-link" href="/blog-test">Nice Blog</a></h1>
-            <h1 class="hero-title"><a class="hero-link" href="/about">Good Stuff</a></h1>
+            <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post(); ?>
+                <h1 class="hero-title"><a class="hero-link" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+            <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+            <?php wp_reset_query(); ?>
+            <?php /*<h1 class="hero-title"><a class="hero-link" href="/talk/talk-test">Interesting Talk</a></h1>*/ ?>
+            
         </div>
         <div class="col-md bd-hero-btm-right">
         </div>
@@ -88,11 +113,22 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
       </div>
     </a>
 
-<?php 
-$query_item_num_1++;
-?>
-<?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
-<?php wp_reset_query(); ?>
+    <?php 
+    $query_item_num_0++;
+    ?>
+    <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+    <?php wp_reset_query(); ?>
+    <?php
+    if ( $query_item_num_0 > 5 ){
+    ?>
+        <div class="all-talks-btn">
+            <a href="/episodes"><button type="button" class="btn btn-lg bd-btn-1">All Episodes</button></a>
+        </div>
+    <?php
+    }
+    ?>
+
+
 <?php /*
     <a href="#" class="col-md-4 bd-mod-1-item">
       <div class="bd-mod-1-top">
@@ -114,7 +150,9 @@ $query_item_num_1++;
         </div>
   </div>
 */ ?>
+    </div>
 </div>
+
 
 <?php /*
 <div class="bd-mod-2 container-fluid">

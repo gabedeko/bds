@@ -10,7 +10,8 @@
   <!--Loop 1: For the 3 posts above the showcase module-->
   <?php 
     $args_0 = array( 
-        'orderby' => 'ID',
+        'orderby' => 'title',
+        'order'   => 'DESC',
         'post_type' =>array('artist'),
         'post_status' => 'publish',
         'posts_per_page' => 20,
@@ -79,7 +80,7 @@
                     echo substr($desc, 0, strrpos($desc, ' ', $maxDescLength-$desc_length));
                     echo "...";
                 } else {
-                    echo $thestring;
+                    echo $desc;
                 }
                 ?>
                 </p>

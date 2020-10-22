@@ -11,7 +11,7 @@
     width: 30px;
     height: 22.5px;
     position: relative;
-    margin: 24px auto;
+    //margin: 24px auto;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -21,6 +21,9 @@
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     cursor: pointer;
+    margin-top: 28px;
+    margin-left: 84%;
+    margin-bottom: 16px;
   }
   
   #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {
@@ -93,12 +96,17 @@
       -webkit-transtition: width .3s ease-in-out, left .3s ease-in-out;
       transition: width .3s ease-in-out, left .3s ease-in-out;
       .bd-nav-icon {
+        //height: 80px;
+        //width: 211px;
         height: 80px;
-        width: 211px;
+        width: 100%;
         background-size: cover;
         background-position: 50%50%;
         background-repeat: no-repeat;
-        margin: 0 auto;
+        //margin: 0 auto;
+      }
+      .bad-nav-icon-img-tag {
+        width:100%;
       }
       &.show {
         transition: all ease-in-out .3s;
@@ -107,10 +115,12 @@
         -webkit-transtition: width .3s ease-in-out, left .3s ease-in-out;
         transition: width .3s ease-in-out, left .3s ease-in-out;
         .bd-menu-item {
+          font-size: 24px;
+          margin-right: 8px;
           transform: translateX(0);
           opacity: 1;
           transition: opacity ease-in-out .3s, transform ease-in-out .3s;
-          text-align: center;
+          text-align: right;
           .bd-menu-link {
             color: $bd-tan;
             transition: color ease-in-out .3s;
@@ -156,10 +166,12 @@
         }
       }
       .bd-menu-item {
+        font-size: 24px;
         transform: translateX(24px);
         opacity: 0;
         transition: opacity ease-in-out .3s, transform ease-in-out .3s;
-        text-align: center;
+        text-align: right;
+        margin-right: 8px;
         .bd-menu-link {
           color: $bd-tan;
           transition: color ease-in-out .3s;
@@ -199,6 +211,7 @@
       align-items: center;
       margin-top: 24vh;
       transition: all ease-in-out 0.3s;
+      margin-left: 16px;
       .share-icon-link {
         color: $bd-yellow;
         transition: color ease-in-out 0.3s;
