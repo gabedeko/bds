@@ -22,6 +22,7 @@
 <div class="bd-hero container-fluid mt-2">
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
+            <div class="bd-hero-border"></div>
             <div class="bd-hero-date">
                 <p class="body-2"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></p>
             </div>
@@ -37,22 +38,21 @@
         <div class="col-md bd-hero-btm-right">
             <div class="hero-share">
                 <h4>SHARE:
-                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a class="hero-share-link" href="https://twitter.com/intent/tweet?text=<?php the_title(); ?> <?php echo site_url();  the_permalink(); ?>  " target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="hero-share-link fb-share-button" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" data-layout="button_count" ><i class="fab fa-facebook-square" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"></i></a>
                 </h4>
             </div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="row mb-5 justify-content-md-center">
+<div class="talk-content-container container-fluid">
+    <div class="talk-video-row row mb-5 justify-content-md-center">
         <?php
                 $video_type = get_field('video_type');
                 $video_id = get_field('video_id');
         ?>
-        <div class="col-md-10">
+        <div class="talk-video-col col-md-10">
 
         <?php if ($video_type == 'youtube'){ ?>
             <iframe id="" class="bd-talk-video" width="" height="560" src="https://www.youtube.com/embed/<?php echo $video_id; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
@@ -63,8 +63,8 @@
         } ?>
         </div>
     </div>
-  <div class="row justify-content-md-center">
-      <div class="col-md-8">
+  <div class="talk-content-row row justify-content-md-center">
+      <div class="talk-content-col col-md-9">
         <?php echo the_content(); ?>
       </div>
   </div>
@@ -79,7 +79,7 @@
     <?php } ?>
   </div>
 </div>
-<div class="container-fluid">
+<div class="talk-artist-container container-fluid">
   <div class="row mt-5 justify-content-md-center bd-artists-section g-2">    
   <?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
     ?>
@@ -91,6 +91,7 @@
     $instagram = get_field('instagram');
     $facebook = get_field('facebook');
     $linkedin = get_field('linkedin');
+    $website = get_field('website');
     $desc = get_field('description');
     //Crop description at whitespace
     $desc_length = strlen($desc);
@@ -116,19 +117,23 @@
                 <a href="<?php the_permalink(); ?>" type="button" class="btn bd-btn-2">More</a>
                 <div class="bd-artists-item-social">
                 <?php if ($twitter != null){?>
-                    <a class="share-icon-link artists-share-icon-link" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="share-icon-link artists-share-icon-link" href="https://twitter.com/<?php echo $twitter ?>" target="_blank"><i class="fab fa-twitter"></i></a>
                     <?php
                 } else {} ?>
                 <?php if ($instagram != null){?>
-                    <a class="share-icon-link artists-share-icon-link" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="share-icon-link artists-share-icon-link" href="https://www.instagram.com/<?php echo $instagram ?>/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
                 <?php
                 } else {} ?>
                 <?php if ($facebook != null){?>
-                    <a class="share-icon-link artists-share-icon-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="share-icon-link artists-share-icon-link" href="https://www.facebook.com/<?php echo $facebook ?>/"><i class="fab fa-facebook-f"></i></a>
                 <?php
                 } else {} ?>
                 <?php if ($linkedin != null){?>
-                    <a class="share-icon-link artists-share-icon-link" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="share-icon-link artists-share-icon-link" href="<?php echo $linkedin ?>"><i class="fab fa-linkedin-in"></i></a>
+                <?php 
+                } else {} ?>
+                 <?php if ($website != null){?>
+                    <a class="share-icon-link artists-share-icon-link" href="<?php echo $website ?>" target="_blank"><i class="fas fa-globe"></i></a>
                 <?php
                 } else {} ?>
                 </div>

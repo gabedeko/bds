@@ -21,15 +21,18 @@
 
 ?>
 
-    <div class="bd-hero bd-contact container-fluid mt-2">
+    <div class="bd-hero bd-hero-2 bd-contact container-fluid mt-2">
       <div class="row bd-hero-top">
           <div class="col-md-4 bd-hero-top-left">
+            <div class="bd-hero-border"></div>
               <div class="bd-hero-date">
                   <h2><i class="fas fa-circle"></i> Episodes</h2>
               </div>
           </div>
+          <?php /*
           <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_30.jpg'))">
           </div>
+          */ ?>
       </div>
     </div>
     @include('partials.content-page')
@@ -46,17 +49,6 @@
         <div class="col-md episodes-left">
             <h3 class="episodes-title"><?php the_title(); ?></h3>
             <h5 class="episodes-date"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></h5>
-            <p class="episodes-desc">
-            <?php
-             //Crop content at whitespace - Line 70
-             if ($content_length > $maxContentLength) {
-                echo substr($content, 0, strrpos($content, ' ', $maxContentLength-$content_length));
-                echo "...";
-            } else {
-                echo $content;
-            }
-            ?>
-            </p>
         </div>
         <div class="col-md episodes-right" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)">
 

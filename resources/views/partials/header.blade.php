@@ -29,10 +29,12 @@
   <h3 class="bd-menu-item"><a href="/episodes" class="bd-menu-link">Episodes</a></h3>
   <?php /*
   <h3 class="bd-menu-item"><a href="/calendar" class="bd-menu-link">Calendar</a></h3>
-  */ ?>
+  
   <h3 class="bd-menu-item"><a href="/stories" class="bd-menu-link">Your Stories</a></h3>
+  */ ?>
   <h3 class="bd-menu-item"><a href="/artists" class="bd-menu-link">Artists</a></h3>
-  <h3 class="bd-menu-item"><a href="/we-name-the-names" class="bd-menu-link">Name the Names</a></h3>
+  <?php /*<h3 class="bd-menu-item"><a href="/we-name-the-names" class="bd-menu-link">Name the Names</a></h3> */ ?>
+  <h3 class="bd-menu-item"><a href="https://linktr.ee/blackdancestories" target="_blank" class="bd-menu-link">Donate</a></h3>
   <h3 class="bd-menu-item"><a href="/about" class="bd-menu-link">About</a></h3>
   <h3 class="bd-menu-item"><a href="/contact" class="bd-menu-link">Contact</a></h3>
   <?php /*
@@ -40,10 +42,10 @@
   </a></h3>
   */ ?>
   <div class="bd-nav-socials">
-        <a class="share-icon-link" href="#"><i class="fab fa-instagram"></i></a>
-        <a class="share-icon-link" href="#"><i class="fab fa-youtube"></i></a>
-        <a class="share-icon-link" href="#"><i class="fab fa-twitter"></i></a>
-        <a class="share-icon-link" href="#"><i class="fab fa-vimeo-v"></i></a>
+        <a class="share-icon-link" href="https://www.facebook.com/pages/category/Community-Organization/Black-Dance-Stories-114655733639715/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a class="share-icon-link" href="https://www.youtube.com/channel/UChAdMkDQCaGWCIaBoSZirTg" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a class="share-icon-link" href="https://twitter.com/blkdancestories" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="share-icon-link" href="https://www.instagram.com/blackdancestories/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
 </div>
 
@@ -62,15 +64,21 @@
         <li class="nav-item">
           <a class="nav-link" href="/calendar">Calendar</a>
         </li>
-        */ ?>
+        
         <li class="nav-item">
           <a class="nav-link" href="/stories">Your Stories</a>
         </li>
+        */ ?>
         <li class="nav-item">
           <a class="nav-link " href="/artists">Artists</a>
         </li>
+        <?php /*
         <li class="nav-item">
           <a class="nav-link " href="/we-name-the-names">Name the Names</a>
+        </li>
+        */ ?>
+        <li class="nav-item">
+          <a class="nav-link " href="https://linktr.ee/blackdancestories" target="_blank">Donate</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="/about">About</a>

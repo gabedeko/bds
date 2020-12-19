@@ -5,6 +5,7 @@
 <div class="bd-hero container-fluid mt-2">
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
+            <div class="bd-hero-border"></div>
             <div class="bd-hero-date">
                 <p class="body-2"><i class="fas fa-circle"></i> July 19–25, 2012</p>
             </div>
@@ -20,9 +21,8 @@
         <div class="col-md bd-hero-btm-right">
             <div class="hero-share">
                 <h4>SHARE:
-                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="hero-share-link" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a class="hero-share-link" href="https://twitter.com/intent/tweet?text=<?php the_title(); ?> <?php echo site_url();  the_permalink(); ?>  " target="_blank"><i class="fab fa-twitter"></i></a>
+                <a class="hero-share-link fb-share-button" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" data-layout="button_count" ><i class="fab fa-facebook-square" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"></i></a>
                 </h4>
             </div>
         </div>

@@ -4,3 +4,27 @@
         width: 100%;
     }
 }
+
+.talk-content-container {
+    margin-top: 32vh;
+    .talk-video-row {
+        .talk-video-col {
+            border: 2px solid $bd-tan;
+            padding: 24px;
+        }
+    }
+    .talk-content-row {
+        .talk-content-col {
+            border: 2px solid $bd-tan;
+            padding: 32px;
+        }
+    }
+}
+.talk-artist-container {
+    margin-top: 24vh;
+}
+
+.bd-artists-section {
+    border-top: 2px solid $bd-grey;
+    padding-top: 40px;
+}

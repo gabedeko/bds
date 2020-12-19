@@ -7,6 +7,9 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            border-right: 2px solid $bd-yellow;
+            padding-right: 0px;
+            transition: padding-right ease-in-out .3s;
             .episodes-date {
                 .fa-circle {
                     color: $bd-tan;
@@ -22,6 +25,9 @@
         }
         &:hover {
             .episodes-left {
+                border-right: 2px solid $bd-yellow;
+                padding-right: 8px;
+                transition: padding-right ease-in-out .3s;
                 .episodes-date {
                     .fa-circle {
                         color: $bd-yellow;

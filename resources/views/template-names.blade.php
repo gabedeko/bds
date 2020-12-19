@@ -9,6 +9,7 @@
   <div class="bd-hero bd-contact container-fluid mt-2">
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
+            <div class="bd-hero-border"></div>
             <div class="bd-hero-date">
                 <h2><i class="fas fa-circle"></i> We Name the Names</h2>
             </div>

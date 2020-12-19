@@ -8,7 +8,7 @@
     'orderby' => 'ID',
     'post_type' =>array('talk'),
     'post_status' => 'publish',
-    'posts_per_page' => 6,
+    'posts_per_page' => 3,
     'offset' => 3,
     "orderby" => "date",
     "order" => 'DESC',
@@ -33,7 +33,34 @@ $args_1 = array(
 ?>
 
 
+<?php
+/* We don't want to load the progress elements if site is mobile */
+if ( !wp_is_mobile() ) { //Desktop
+    ?>
+    <div id="loader">
+    <div class="spinner">
+        <div class="spinner-logo"><img class="spinner-logo-img" src="@asset('images/logo/bds_logo.jpg')"></div>
+        <!--div class="spinner-text">Loading</div-->
+        <div class="spinner-sector spinner-sector-red"></div>
+        <div class="spinner-sector spinner-sector-blue"></div>
+        <div class="spinner-sector spinner-sector-green"></div>
+      </div>
+    
+    </div>
 
+    <div id="progress-screen"></div>
+
+    <script>    
+     var audio = new Audio('./wp-content/themes/black_dance/resources/bds_intro.mp3');
+     audio.play();
+    </script>
+
+    <?php
+} else { //Mobile
+    //Do nothing
+}
+
+?>
 
 
 <?php
@@ -66,8 +93,9 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
 ?>
 
 <div class="bd-hero container-fluid mt-2">
-    <div class="row bd-hero-top">
+    <div class="row bd-hero-top bd-hero-top-home">
         <div class="col-md-4 bd-hero-top-left">
+            <div class="bd-hero-border"></div>
             <div class="bd-hero-date">
             <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post(); ?>
                 <p class="body-2"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></p>
@@ -78,7 +106,7 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
         </div>
         <div class="col-md-8 bd-hero-top-right multiple-items">
             <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post(); ?>
-                <a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)"></a>
+                <a href="<?php the_permalink(); ?>" class="bd-hero-top-right-bg" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)"></a>
             <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
             <?php wp_reset_query(); ?>
                 <?php /*<a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_8.jpg'))"></a> */ ?>
@@ -98,8 +126,22 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
     </div>
 </div>
 
+<div class="container-fluid community-container">
+    <div class="community-row row justify-content-md-center">
+        <div class="col-md col-md-10 community-col">
+            <h1 class="community-title">We Are A Community</h1>
+            <p class="body-1 community-copy mb-5">
 
-<div class="bd-mod-1 container-fluid mb-3">
+            <?php
+                        echo get_field( 'community_message' );
+                    ?>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<div class="bd-mod-1 container-fluid mb-3 mt-5">
   <div class="row">
   <?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
 ?>
@@ -119,7 +161,7 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
     <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
     <?php wp_reset_query(); ?>
     <?php
-    if ( $query_item_num_0 > 5 ){
+    if ( $query_item_num_0 > 2 ){
     ?>
         <div class="all-talks-btn">
             <a href="/episodes"><button type="button" class="btn btn-lg bd-btn-1">All Episodes</button></a>
@@ -235,18 +277,54 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
   </div>
 </div>
 */ ?>
-
+<div class="container-fluid engage-container mt-5 mb-5">
+    <div class="row engage-row">
+        <div class="col-md-4 engage-col">
+            <h3 class="engage-title mt-2 mb-2">Join Our Newsletter</h3>
+            <i class="engage-icon fas fa-paper-plane"></i>
+            <p class="body-2 engage-copy mt-4 mb-4"> Join our mailing list to get weekly updates on our programs, screenings and special events</p>
+            <a href="https://vr2.verticalresponse.com/s/websitesignupform40681930229779" target="_blank"><button type="button" class="btn bd-btn-3">Join Newsletter</button></a>
+        </div>
+        <div class="col-md-4 engage-col">
+            <h3 class="engage-title mt-2 mb-2">Donate</h3>
+            <i class="engage-icon fas fa-donate"></i>
+            <p class="body-2  engage-copy mt-4 mb-4">We appreciate any amount you can offer to the BDS team</p>
+            <a href="https://linktr.ee/blackdancestories" target="_blank"><button type="button" class="btn bd-btn-3">Donate</button></a>
+        </div>
+        <div class="col-md-4 engage-col">
+            <h3 class="engage-title mt-2 mb-2">Become a Patron</h3>
+            <i class="engage-icon fab fa-patreon"></i>
+            <p class="body-2  engage-copy mt-4 mb-4"> Subscribe and support our Patreon for much more exclusive content</p>
+            <a href="https://www.patreon.com/blackdancestories" target="_blank"><button type="button" class="btn bd-btn-3">Visit Patreon</button></a>
+        </div>
+</div>
+</div>
+<?php /*
 <div class="container-fluid join-us-container">
     <div class="row">
         <div class="col-md join-us-left">
             <h2 class="join-us-left-title">Join Us</h2>
-            <p class="body-2 join-us-left-copy"> Please, join our mailing list to get weekly updates on our programs, screenings and special events</p>
+            <p class="body-2 join-us-left-copy"> Join our mailing list to get weekly updates on our programs, screenings and special events</p>
         </div>
         <div class="col-md join-us-right">
             <div class="join-us-right-input">
             <?php
                     echo get_field( 'newsletter_signup' );
             ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid donate-container">
+    <div class="row">
+        <div class="col-md join-us-left">
+            <h2 class="join-us-left-title">Donate</h2>
+            <p class="body-2 join-us-left-copy"> Please donate to BDS. We appreciate any amount you can offer.</p>
+        </div>
+        
+        <div class="col-md patreon-right">
+            <div class="patreon-right-input">
+                <a href="https://linktr.ee/blackdancestories" target="_blank"></a><button type="button" class="btn bd-btn-1">Donate</button>
             </div>
         </div>
     </div>
@@ -264,5 +342,6 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
         </div>
     </div>
 </div>
+*/ ?>
 
 @endsection

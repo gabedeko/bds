@@ -1,5 +1,8 @@
 .bd-hero {
-    height: 100vh;
+    &.bd-hero-2 {
+        height: 40vh!important;
+    }
+    height: 68vh;
     margin: 0 0 24px 0;
     .bd-hero-top {
         height: 68%;
@@ -8,10 +11,15 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            padding-left: 0;
+            .bd-hero-border {
+                height: 100%;
+                border-right: 2px solid $bd-yellow;
+            }
             .bd-hero-date {
                 padding: 16px;
                 border-top: 2px solid $bd-yellow;
-                border-bottom: 2px solid transparent;
+                //border-bottom: 2px solid $bd-yellow;
                 transition: all ease-in-out .3s;
                 .body-2 .fas {
                     transition: color ease-in-out .3s;
@@ -19,7 +27,7 @@
             }
             @media (max-width: 767.98px) {
                 display: none;
-               }
+            }
         }
         .bd-hero-top-right {
                 background-size: cover;
@@ -31,10 +39,15 @@
                 background-position: 50% 50%;
             }
         }
+        @media (max-width: 767.98px) {
+            margin-top: 72px;
+            height: 40%;
+        }
     }
     .bd-hero-btm {
         height: 32%;
         .bd-hero-btm-left {
+            border-bottom:2px solid $bd-yellow;
         }
         .bd-hero-btm-right {
             display: flex;
@@ -45,19 +58,23 @@
                 h4 .hero-share-link .fab {
                     color: $bd-grey;
                     transition: color ease-in-out .3s;
-                }
-                &:hover {
+                    &:hover {
+                            color: $bd-yellow;
+                            transition: color ease-in-out .3s;
+                            }
+                    }
+                /*&:hover {
                     h4 .hero-share-link .fab {
                         color: $bd-yellow;
                         transition: color ease-in-out .3s;
                     }
-                }
+                }*/
             }
         }
     }
     &:hover {
         .bd-hero-top .bd-hero-top-left .bd-hero-date {
-            padding: 24px 16px 16px 16px;
+            padding: 24px 16px 16px 0px;
             border-top: 2px solid $bd-yellow;
             border-bottom: 2px solid transparent;
             transition: all ease-in-out .3s;
@@ -69,11 +86,16 @@
     }
 
     &.bd-contact, &.bd-stories {
-        height: 64vh;
+        //height: 64vh;
         .bd-hero-top {
             height: 100%;
             .bd-hero-top-left {
+                .bd-hero-border {
+                    height: 100%;
+                    border-right: 2px solid $bd-yellow;
+                }
                 .bd-hero-date {
+                    border-bottom: 2px solid $bd-yellow;
                     h2 .fas, h3 .fas {
                         transition: color ease-in-out .3s;
                     }
@@ -103,7 +125,7 @@
                 height: 48vh;
             }
             .bd-mod-1-top {
-                height: 40vh;
+                height: 24vh;
                 padding: 16px;
                 border-top: 2px solid $bd-green;
                 border-left: 2px solid transparent;
@@ -321,7 +343,7 @@
 }
 
 
-.join-us-container, .patreon-container {
+.join-us-container, .patreon-container, .donate-container {
     height: 40vh;
     margin: 24px 0;
     @media (max-width: 767.98px) {
@@ -379,4 +401,47 @@
         }
     }
     
+}
+
+
+.engage-container {
+    .engage-row {
+        padding: 16px 0;
+        border-top: 2px solid $bd-grey;
+        border-bottom: 2px solid $bd-grey;
+        .engage-col {
+            display: flex;
+            flex-direction: column;
+            //justify-content: space-around;
+            align-items: center;
+            .engage-title {
+                text-align: center;
+            }
+            .engage-icon {
+                margin: 16px 0;
+                font-size: 160px;
+                color: $bd-green;
+            }
+            .engage-copy {
+                text-align: center;
+                @media (min-width: 992px) { 
+                    min-height: 160px;
+                 }
+            }
+        }
+    }
+}
+
+.community-container {
+    margin-top: 32vh;
+    margin-bottom: 200px;
+    .community-row {
+        .community-col {
+            border: 2px solid $bd-tan;
+            padding-top: 32px;
+           h1, p {
+            text-align: center;
+           }
+        }
+    }
 }
