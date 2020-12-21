@@ -44,7 +44,7 @@
         <?php echo $desc; ?>
       </div>
   </div>
-  <div class="row justify-content-md-center mt-5 justify-content-md-center team-profile-social p-5">
+  <div class="row justify-content-md-center justify-content-md-center team-profile-social p-5">
   <h1 class="text-center team-profile-social-title mt-3 mb-5">Social Profiles</h1>
 
   <?php 

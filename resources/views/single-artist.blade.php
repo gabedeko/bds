@@ -39,14 +39,14 @@
     </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row justify-content-md-center">
-      <div class="col-md-8">
+<div class="artist-container container-fluid">
+  <div class="artist-row row justify-content-md-center">
+      <div class="artist-col col-md-8">
         <?php echo $desc; ?>
       </div>
   </div>
-  <div class="row justify-content-md-center mt-5 justify-content-md-center team-profile-social p-5">
-  <h1 class="text-center team-profile-social-title mt-3 mb-5">Social Profiles</h1>
+  <div class="row justify-content-md-center justify-content-md-center team-profile-social p-5">
+  <h1 class="text-center team-profile-social-title mb-5">Social Profiles</h1>
 
   <?php 
 if( $twitter) {

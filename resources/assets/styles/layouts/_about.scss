@@ -74,12 +74,18 @@
     .team-profile-desc {
 
     }
-    .team-profile-social {
-        .team-profile-social-col {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
+    
+}
+
+.team-profile-social {
+    border-top: 2px solid gray;
+    margin-top:40vh;
+
+
+    .team-profile-social-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 }

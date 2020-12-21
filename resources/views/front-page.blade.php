@@ -82,7 +82,20 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
             </div>
             <div class="announcement-right-btm">
                 <h3>Next Episode</h3>
-                <p class="body-2">Thursday the 10th at 6PM on Youtube here</p>
+                <p class="body-2">
+                    <?php
+                        echo get_field( 'announcement_subtitle' );
+                    ?>
+                    </p>
+                <a href="
+                <?php
+                        echo get_field( 'announcement_link' );
+                    ?>
+                    "><button type="button" class="btn btn-lg bd-btn-1">
+                    <?php
+                        echo get_field( 'announcement_link_msg' );
+                    ?>
+                </button></a>
             </div>
             
         </div>

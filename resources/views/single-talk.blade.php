@@ -144,7 +144,7 @@
     <?php 
     $query_item_num_1++;
     ?>
-    <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+    <?php endwhile; else: ?> <p></p> <?php endif; ?>
     <?php wp_reset_query(); ?>
 @endwhile
 @endsection

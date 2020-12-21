@@ -54,3 +54,13 @@
         }
     }
 }
+
+.artist-container {
+    margin-top: 32vh;
+    .artist-row {
+        .artist-col {
+            border: 2px solid $bd-tan;
+            padding: 16px;
+        }
+    }
+}

@@ -51,15 +51,16 @@
           var queue = new createjs.LoadQueue(false);
       
           queue.on("fileload", handleFileComplete);
-          queue.on('loader', event => {
+          queue.on('progress', event => {
+            //console.log('testing');
               //Only add 'body-shrink' if on home page
-              <?php if ( is_home() ) { ?> body.classList.add('body-shrink'); console.log('shit'); <?php } else {} ?>
+              <?php if ( is_front_page() ) { ?> body.classList.add('body-shrink'); <?php } else {} ?>
+              
               //progress bar loads to 100 then is complete
               let loader = Math.floor(event.loader * 100);
               this.loader.style.width = loader+'%';
               if (loader == 100) {
                   console.log('all done');
-                  document.querySelector('body').style.background = 'white'
               }
           });
           <?php if ( $the_query_0->have_posts() ) : $x = 0; while ( $the_query_0->have_posts() ) : $the_query_0->the_post(); 
