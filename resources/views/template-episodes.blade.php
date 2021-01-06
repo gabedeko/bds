@@ -21,23 +21,31 @@
 
 ?>
 
-    <div class="bd-hero bd-hero-2 bd-contact container-fluid mt-2">
-      <div class="row bd-hero-top">
-          <div class="col-md-4 bd-hero-top-left">
-            <div class="bd-hero-border"></div>
-              <div class="bd-hero-date">
-                  <h2><i class="fas fa-circle"></i> Episodes</h2>
-              </div>
-          </div>
-          <?php /*
-          <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_30.jpg'))">
-          </div>
-          */ ?>
-      </div>
+<div class="bd-hero bd-hero-2 container-fluid mt-2 mb-2">
+    <div class="row bd-hero-top">
+        <div class="col-md-4 bd-hero-top-left">
+        <div class="bd-hero-border"></div>
+        <div class="bd-hero-date"></div>
+        </div>
+        <?php /*
+        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_32.jpg'))">
+        
+        </div>
+        */ ?>
     </div>
+    <div class="row bd-hero-btm">
+        <div class="col-md bd-hero-btm-left">
+            <h1><i class="fas fa-circle"></i> Episodes</h1>
+        </div>
+        <div class="col-md bd-hero-btm-right">
+            
+        </div>
+    </div>
+</div>
+
     @include('partials.content-page')
 
-<div class="container-fluid episodes-container">
+<div class="container-fluid episodes-container mt-2">
 <?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
 ?>
     <?php 

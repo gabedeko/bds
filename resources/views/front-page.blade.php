@@ -142,7 +142,7 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
 <div class="container-fluid community-container">
     <div class="community-row row justify-content-md-center">
         <div class="col-md col-md-10 community-col">
-            <h1 class="community-title">We Are A Community</h1>
+            <h1 class="community-title">Our Mission</h1>
             <p class="body-1 community-copy mb-5">
 
             <?php

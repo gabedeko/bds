@@ -10,7 +10,8 @@
 <!--Loop 1: For the 3 posts above the showcase module-->
 <?php 
  $args_0 = array( 
-    'orderby' => 'ID',
+    'orderby' => 'title',
+    'order'   => 'DESC',
     'post_type' =>array('team'),
     'post_status' => 'publish',
     'posts_per_page' => 20,
@@ -35,7 +36,7 @@
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left">
-            <h1>About</h1>
+            <h1><i class="fas fa-circle"></i> About</h1>
         </div>
         <div class="col-md bd-hero-btm-right">
             
@@ -45,7 +46,9 @@
 
 <div class="about-content-container container-fluid">
   <div class="about-content-row row justify-content-md-center">
+    
       <div class="about-content-col col-md-8">
+        <h2 class="about-title text-center">Our Manifesto</h2>
         @include('partials.content-page')
       </div>
   </div>
@@ -67,7 +70,11 @@
     $desc = get_field('description');
     //Crop description at whitespace
     $desc_length = strlen($desc);
-    $maxDescLength = 340;
+    if ( !wp_is_mobile() ) {
+        $maxDescLength = 340;
+    } else {
+        $maxDescLength = 200;
+    }
     
 
     $title = get_field('team_title');

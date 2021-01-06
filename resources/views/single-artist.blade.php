@@ -42,12 +42,19 @@
 <div class="artist-container container-fluid">
   <div class="artist-row row justify-content-md-center">
       <div class="artist-col col-md-8">
-        <?php echo $desc; ?>
+        <p class="body-2"><?php echo $desc; ?></p>
       </div>
   </div>
   <div class="row justify-content-md-center justify-content-md-center team-profile-social p-5">
-  <h1 class="text-center team-profile-social-title mb-5">Social Profiles</h1>
-
+  <?php
+  if( ! $twitter && ! $instagram && ! $facebook && ! $linkedin && ! $website ){
+      
+  } else {
+      ?>
+        <h1 class="text-center team-profile-social-title mb-5">Social Profiles</h1>
+      <?php
+  }
+  ?>
   <?php 
 if( $twitter) {
     ?>

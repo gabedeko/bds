@@ -7,20 +7,28 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
 
-  <div class="bd-hero bd-hero-2 bd-contact container-fluid mt-2">
+  <div class="bd-hero bd-hero-2 container-fluid mt-2">
     <div class="row bd-hero-top">
         <div class="col-md-4 bd-hero-top-left">
-          <div class="bd-hero-border"></div>
-            <div class="bd-hero-date">
-                <h2><i class="fas fa-circle"></i> Contact</h2>
-            </div>
+        <div class="bd-hero-border"></div>
+        <div class="bd-hero-date"></div>
         </div>
         <?php /*
-        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_23.jpg'))">
+        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_32.jpg'))">
+        
         </div>
         */ ?>
     </div>
-  </div>
+    <div class="row bd-hero-btm">
+        <div class="col-md bd-hero-btm-left">
+            <h1><i class="fas fa-circle"></i> Contact</h1>
+        </div>
+        <div class="col-md bd-hero-btm-right">
+            
+        </div>
+    </div>
+</div>
+
   <div class="contact-content-container container-fluid contact-container">
     <div class="contact-content-row row justify-content-end">
       <div class="contact-content-col-left col-4 d-flex align-items-center justify-content-center">

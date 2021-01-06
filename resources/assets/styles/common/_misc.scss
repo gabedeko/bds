@@ -128,3 +128,24 @@ body {
         display: flex;
     }
 }
+
+
+.facetwp-facet-artist_facet {
+    text-align: center;
+    .facetwp-alpha {
+        font-size: 32px;
+        &.available {
+            color: $bd-yellow;
+            transition: color ease-in-out .3s;
+            &:hover {
+                color: $bd-green;
+                transition: color ease-in-out .3s;
+            }
+        }
+        &.selected {
+            color: $bd-green;
+                transition: color ease-in-out .3s;
+        }
+        color: $bd-grey;
+    }
+}

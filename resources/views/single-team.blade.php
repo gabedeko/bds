@@ -45,7 +45,16 @@
       </div>
   </div>
   <div class="row justify-content-md-center justify-content-md-center team-profile-social p-5">
-  <h1 class="text-center team-profile-social-title mt-3 mb-5">Social Profiles</h1>
+  
+  <?php
+  if( ! $twitter && ! $instagram && ! $facebook && ! $linkedin && ! $website ){
+      
+  } else {
+      ?>
+        <h1 class="text-center team-profile-social-title mt-3 mb-5">Social Profiles</h1>
+      <?php
+  }
+  ?>
 
   <?php 
 if( $twitter) {
