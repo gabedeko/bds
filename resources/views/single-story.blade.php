@@ -16,7 +16,7 @@
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left">
-            <h1>This is a story</h1>
+            <h1 class="bd-hero-title">This is a story</h1>
         </div>
         <div class="col-md bd-hero-btm-right">
             <div class="hero-share">

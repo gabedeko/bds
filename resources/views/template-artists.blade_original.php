@@ -34,7 +34,7 @@
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left">
-            <h1>Artists</h1>
+            <h1 class="bd-hero-title">Artists</h1>
         </div>
         <div class="col-md bd-hero-btm-right">
             

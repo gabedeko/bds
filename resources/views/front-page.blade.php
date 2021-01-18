@@ -50,11 +50,12 @@ if ( !wp_is_mobile() ) { //Desktop
 
     <div id="progress-screen"></div>
 
-    <script>    
+    <?php /*
+    <!--script>    
      var audio = new Audio('./wp-content/themes/black_dance/resources/bds_intro.mp3');
      audio.play();
-    </script>
-
+    </script-->
+    */ ?>
     <?php
 } else { //Mobile
     //Do nothing

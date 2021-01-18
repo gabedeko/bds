@@ -30,7 +30,7 @@
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left">
-            <h1><?php the_title(); ?></h1>
+            <h1 class="bd-hero-title"><?php the_title(); ?></h1>
         </div>
         <div class="col-md bd-hero-btm-right">
            
@@ -40,8 +40,8 @@
 
 <div class="container-fluid team-profile">
   <div class="row justify-content-md-center team-profile-desc">
-      <div class="col-md-8">
-        <?php echo $desc; ?>
+      <div class="col-md-8 team-profile-col">
+        <p class="body-2"><?php echo $desc; ?></p>
       </div>
   </div>
   <div class="row justify-content-md-center justify-content-md-center team-profile-social p-5">

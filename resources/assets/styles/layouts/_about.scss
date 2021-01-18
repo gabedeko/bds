@@ -34,6 +34,7 @@
                 flex-direction: column;
                 justify-content: space-evenly;
                 transition: opacity ease-in-out .3s, transform ease-in-out .3s;
+                padding: 12px;
                 .bd-team-item-name, .bd-team-item-title, .bd-team-item-desc, .bd-team-item-social {
                     color: $bd-black;
                 }
@@ -71,8 +72,12 @@
 }
 
 .team-profile {
+    margin-top: 32vh;
     .team-profile-desc {
-
+        .team-profile-col {
+            border: 2px solid $bd-tan;
+            padding: 16px;
+        }
     }
     
 }

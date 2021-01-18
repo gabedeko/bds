@@ -57,6 +57,12 @@
         height: 32%;
         .bd-hero-btm-left {
             border-bottom:2px solid $bd-yellow;
+            .bd-hero-title {
+                .fas {
+                    color: $bd-tan;
+                    transition: color ease-in-out .3s;
+                }
+            }
         }
         .bd-hero-btm-right {
             display: flex;
@@ -90,6 +96,17 @@
             .body-2 .fas {
                 color: $bd-yellow;
                 transition: color ease-in-out .3s;
+            }
+        }
+        .bd-hero-btm {
+            .bd-hero-btm-left {
+                border-bottom:2px solid $bd-yellow;
+                .bd-hero-title {
+                    .fas {
+                        color: $bd-yellow;
+                        transition: color ease-in-out .3s;
+                    }
+                }
             }
         }
     }

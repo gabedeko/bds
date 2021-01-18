@@ -31,7 +31,7 @@
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left">
-            <h1><?php the_title(); ?></h1>
+            <h1 class="bd-hero-title"><?php the_title(); ?></h1>
         </div>
         <div class="col-md bd-hero-btm-right">
             

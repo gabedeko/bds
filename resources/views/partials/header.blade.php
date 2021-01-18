@@ -34,7 +34,7 @@
   */ ?>
   <h3 class="bd-menu-item"><a href="/artists" class="bd-menu-link">Artists</a></h3>
   <?php /*<h3 class="bd-menu-item"><a href="/we-name-the-names" class="bd-menu-link">Name the Names</a></h3> */ ?>
-  <h3 class="bd-menu-item"><a href="https://linktr.ee/blackdancestories" target="_blank" class="bd-menu-link">Donate</a></h3>
+  <h3 class="bd-menu-item"><a href="https://www.iabdassociation.org/donations/fund.asp?id=19911" target="_blank" class="bd-menu-link">Donate</a></h3>
   <h3 class="bd-menu-item"><a href="/about" class="bd-menu-link">About</a></h3>
   <h3 class="bd-menu-item"><a href="/contact" class="bd-menu-link">Contact</a></h3>
   <?php /*
@@ -78,7 +78,7 @@
         </li>
         */ ?>
         <li class="nav-item">
-          <a class="nav-link " href="https://linktr.ee/blackdancestories" target="_blank">Donate</a>
+          <a class="nav-link " href="https://www.iabdassociation.org/donations/fund.asp?id=19911" target="_blank">Donate</a>
         </li>
         <li class="nav-item">
           <a class="nav-link " href="/about">About</a>

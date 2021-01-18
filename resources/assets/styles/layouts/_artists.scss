@@ -19,6 +19,7 @@
                 flex-direction: column;
                 justify-content: space-evenly;
                 transition: opacity ease-in-out .3s, transform ease-in-out .3s;
+                padding: 12px;
                 .bd-artists-item-name, .bd-artists-item-title, .bd-artists-item-desc, .bd-artists-item-social {
                     color: $bd-black;
                 }
