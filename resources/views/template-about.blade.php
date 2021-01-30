@@ -54,7 +54,7 @@
         @include('partials.content-page')
       </div>
   </div>
-  <div class="about-team-row row justify-content-md-center pt-5">
+  <div class="about-team-row row pt-5">
     <div class="about-team-col col-md-4">
        <h1 class="text-center">Our Team</h1>
     </div>
@@ -145,7 +145,7 @@
   <?php
     if ($intern_check == true){
   ?>
-  <div class="about-team-row row justify-content-md-center pt-5">
+  <div class="about-team-row row pt-5">
     <div class="about-team-col col-md-4">
        <h1 class="text-center">Interns</h1>
     </div>
@@ -233,8 +233,8 @@
   <?php
     if ($former_check == true){
   ?>
-  <div class="about-team-row row justify-content-md-center pt-5">
-    <div class="about-team-col col-md-4">
+  <div class="about-team-row row pt-5">
+    <div class="about-team-col col-md-7">
        <h1 class="text-center">Past Team Members</h1>
     </div>
   </div>

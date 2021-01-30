@@ -123,6 +123,7 @@
           margin-right: 8px;
           transform: translateX(0);
           opacity: 1;
+          width: 88%;
           transition: opacity ease-in-out .3s, transform ease-in-out .3s;
           text-align: left;
           padding-left: 8px;
@@ -132,6 +133,19 @@
             &:hover {
               color: $bd-yellow;
               transition: color ease-in-out .3s;
+            }
+          }
+          &.bd-menu-item-last {
+            border-bottom: 2px solid $bd-yellow;
+            padding-bottom: 8px;
+            transition: border-bottom ease-in-out .3s, opacity ease-in-out .3s, transform ease-in-out .3s;
+            .bd-menu-link {
+              color: $bd-tan;
+              transition: color ease-in-out .3s;
+              &:hover {
+                color: $bd-yellow;
+                transition: color ease-in-out .3s;
+              }
             }
           }
         }
@@ -154,6 +168,12 @@
             color: $bd-yellow;
             transition: color ease-in-out .3s;
           }
+        }
+        .bd-nav-socials {
+          border-top: 2px solid $bd-yellow;
+          width: 88%;
+          padding-top: 8px;
+          transition: border-top ease-in-out .3s;
         }
       }
 
@@ -183,6 +203,20 @@
           &:hover {
             color: $bd-yellow;
             transition: color ease-in-out .3s;
+          }
+        }
+        &.bd-menu-item-last {
+          border-bottom: 2px solid $bd-black;
+          width: 88%;
+          padding-bottom: 8px;
+          transition: border-bottom ease-in-out .3s, opacity ease-in-out .3s, transform ease-in-out .3s;
+          .bd-menu-link {
+            color: $bd-tan;
+            transition: color ease-in-out .3s;
+            &:hover {
+              color: $bd-yellow;
+              transition: color ease-in-out .3s;
+            }
           }
         }
       }
@@ -218,6 +252,10 @@
       //margin-top: 24vh;
       transition: all ease-in-out 0.3s;
       //margin-left: 16px;
+      border-top: 2px solid $bd-black;
+      width: 88%;
+      padding-top: 8px;
+      transition: border-top ease-in-out .3s;
       .share-icon-link {
         padding: 0 6px;
         color: $bd-yellow;

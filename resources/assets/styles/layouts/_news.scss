@@ -1,0 +1,68 @@
+.news-container {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    .news-item {
+        margin: 16px 0;
+        height: 50vh;
+        width: 80vw;
+        background-size: cover;
+        background-position: 50% 0%;
+        transition: background-position ease-in-out 0.3s;
+        .news-item-background {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.0);
+            transition: background-color ease-in-out 0.3s;
+            padding: 0px 24px;
+            .news-item-title, .news-item-desc, .news-item-date, .news-item-source {
+                color: rgba(0, 0, 0, 0.0);
+                transition: color ease-in-out 0.3s;
+                @media (max-width: 767.98px) {
+                    color: $bd-tan;
+                  }
+            }
+            @media (max-width: 767.98px) {
+                padding: 0px 4px;
+                background-color: rgba(0,0,0,0.4);
+                text-align: center;
+              }
+        }
+        &:hover {
+            background-position: 50% 20%;
+            transition: background-position ease-in-out 0.3s;
+            .news-item-background {
+                background-color: rgba(0, 0, 0, 0.6);
+                transition: background-color ease-in-out 0.3s;
+                .news-item-title, .news-item-desc, .news-item-date, .news-item-source {
+                    color: $bd-tan;
+                    transition: color ease-in-out 0.3s;
+                }
+            }
+        }
+        
+    }
+}
+
+.init-content-container {
+    margin-top: 16vh;
+    .init-video-row {
+        .init-video-col {
+            border: 2px solid $bd-tan;
+            padding: 24px;
+        }
+    }
+    .init-content-row {
+        .init-content-col {
+            border: 2px solid $bd-tan;
+            padding: 32px;
+        }
+    }
+}

@@ -71,7 +71,7 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
     <div class="announcement-container container-fluid mt-3 mb-3">
     <div class="row justify-content-md-center">
         <div class="col-md-5 announcement-left mt-2 mb-2">
-            <h3>Announcements</h3>
+            <h3 class="mt-2">Announcements</h3>
         </div>
         <div class="col-md-5 announcement-right mt-2 mb-2">
             <div class="announcement-right-top">
@@ -82,7 +82,6 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
                 </p>
             </div>
             <div class="announcement-right-btm">
-                <h3>Next Episode</h3>
                 <p class="body-2">
                     <?php
                         echo get_field( 'announcement_subtitle' );
@@ -92,7 +91,7 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
                 <?php
                         echo get_field( 'announcement_link' );
                     ?>
-                    "><button type="button" class="btn btn-lg bd-btn-1">
+                    " target="_blank"><button type="button" class="btn btn-lg bd-btn-1">
                     <?php
                         echo get_field( 'announcement_link_msg' );
                     ?>

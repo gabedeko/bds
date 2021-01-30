@@ -1,6 +1,6 @@
 body {
     &.body-shrink {
-        height: 100vh;
+        height: 200vh;
         //position: fixed;
         //position: relative;
         overflow: hidden;
@@ -14,24 +14,28 @@ body {
 
 #progress-screen {
     background: $bd-black;
-    opacity: 1;
+    //opacity: 1;
     display: grid;
     width: 100%;
     //grid-template-columns: repeat(2, 25%);
     //grid-gap: 5em;
-    height: 110vh;
+    height: 200vh;
     justify-content: center;
     align-content: center;
     //transform: scale(.8);
     position: absolute;
     z-index:30;
-    transition: opacity ease-in-out 1.2s;
+    transition: height ease-in-out .6s;
     top: -16px;
     &.progress-screen-fadein {
-        opacity: 0;
+        //opacity: 0;
+
+        height: 0vh;
+
+
         //transform: scale(1) !important;
         //opacity: 1 !important;
-        transition: opacity ease-in-out 1.2s;
+        transition: height ease-in-out .6s;
         //z-index:-1;
     }
     &.progress-screen-index {

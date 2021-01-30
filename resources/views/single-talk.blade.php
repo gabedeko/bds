@@ -52,16 +52,20 @@
                 $video_type = get_field('video_type');
                 $video_id = get_field('video_id');
         ?>
-        <div class="talk-video-col col-md-10">
+        
 
         <?php if ($video_type == 'youtube'){ ?>
-            <iframe id="" class="bd-talk-video" width="" height="560" src="https://www.youtube.com/embed/<?php echo $video_id; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+            <div class="talk-video-col col-md-10">
+                <iframe id="" class="bd-talk-video" width="" height="560" src="https://www.youtube.com/embed/<?php echo $video_id; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
         <?php } else if  ($video_type == 'vimeo') { ?>
-            <iframe id="" class="bd-talk-video" src="https://player.vimeo.com/video/<?php echo $video_id; ?>" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            <div class="talk-video-col col-md-10">
+                <iframe id="" class="bd-talk-video" src="https://player.vimeo.com/video/<?php echo $video_id; ?>" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div> 
         <?php } else{
             //Do nothing 
         } ?>
-        </div>
+        
     </div>
   <div class="talk-content-row row justify-content-md-center">
       <div class="talk-content-col col-md-9">

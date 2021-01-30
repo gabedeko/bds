@@ -33,10 +33,12 @@
   <h3 class="bd-menu-item"><a href="/stories" class="bd-menu-link">Your Stories</a></h3>
   */ ?>
   <h3 class="bd-menu-item"><a href="/artists" class="bd-menu-link">Artists</a></h3>
+  <h3 class="bd-menu-item"><a href="/news" class="bd-menu-link">News & Press</a></h3>
+  <h3 class="bd-menu-item"><a href="/initiatives" class="bd-menu-link">BDS Initiatives</a></h3>
   <?php /*<h3 class="bd-menu-item"><a href="/we-name-the-names" class="bd-menu-link">Name the Names</a></h3> */ ?>
   <h3 class="bd-menu-item"><a href="https://www.iabdassociation.org/donations/fund.asp?id=19911" target="_blank" class="bd-menu-link">Donate</a></h3>
   <h3 class="bd-menu-item"><a href="/about" class="bd-menu-link">About</a></h3>
-  <h3 class="bd-menu-item"><a href="/contact" class="bd-menu-link">Contact</a></h3>
+  <h3 class="bd-menu-item bd-menu-item-last"><a href="/contact" class="bd-menu-link">Contact</a></h3>
   <?php /*
   <h3 class="bd-menu-title"><a class="bd-menu-title-link" href="/"><span class="bd-menu-title-red">B</span><span class="bd-menu-title-black">l</span><span class="bd-menu-title-green">a</span><span class="bd-menu-title-yellow">c</span><span class="bd-menu-title-red">k</span> <span class="bd-menu-title-black">D</span><span class="bd-menu-title-green">a</span><span class="bd-menu-title-yellow">n</span><span class="bd-menu-title-red">c</span><span class="bd-menu-title-black">e</span> <span class="bd-menu-title-green">S</span><span class="bd-menu-title-yellow">t</span><span class="bd-menu-title-red">o</span><span class="bd-menu-title-black">r</span><span class="bd-menu-title-green">i</span><span class="bd-menu-title-yellow">e</span><span class="bd-menu-title-red">s</span>
   </a></h3>
@@ -71,6 +73,12 @@
         */ ?>
         <li class="nav-item">
           <a class="nav-link " href="/artists">Artists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/news">News & Press</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="/initiatives">BDS Initiatives</a>
         </li>
         <?php /*
         <li class="nav-item">
