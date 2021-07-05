@@ -39,7 +39,7 @@
 </div>
 
 <div class="container-fluid team-profile">
-  <div class="row justify-content-md-center team-profile-desc">
+  <div class="row justify-content-md-center team-profile-desc mb-5">
       <div class="col-md-8 team-profile-col">
         <p class="body-2"><?php echo $desc; ?></p>
       </div>

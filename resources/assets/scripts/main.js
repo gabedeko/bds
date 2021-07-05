@@ -86,6 +86,7 @@ $('#search-screen-close').click(function(){
   }
 });
 $('#bds-search-btn').click(function(){
+  window.scrollTo(0, 0);
   if ($('#search-screen').hasClass( 'show' )) {
     $('#search-screen').removeClass('show');
   } else {
