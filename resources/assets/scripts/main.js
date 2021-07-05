@@ -76,3 +76,19 @@ $('#navbar-toggler').click(function(){
     $('#navbarNav').addClass('show');
   }
 });
+
+
+$('#search-screen-close').click(function(){
+  if ($('#search-screen').hasClass( 'show' )) {
+    $('#search-screen').removeClass('show');
+  } else {
+    $('#search-screen').addClass('show');
+  }
+});
+$('#bds-search-btn').click(function(){
+  if ($('#search-screen').hasClass( 'show' )) {
+    $('#search-screen').removeClass('show');
+  } else {
+    $('#search-screen').addClass('show');
+  }
+});

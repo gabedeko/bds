@@ -26,6 +26,9 @@
     <span></span>
     <span></span>
   </div>
+  <i id="bds-search-btn" class="bds-search-btn fas fa-search"></i>
+
+
   <h3 class="bd-menu-item"><a href="/episodes" class="bd-menu-link">Episodes</a></h3>
   <?php /*
   <h3 class="bd-menu-item"><a href="/calendar" class="bd-menu-link">Calendar</a></h3>
@@ -99,3 +102,13 @@
   </div>
 </nav>
 
+
+<div id="search-screen" class="search-screen">
+    <div class="search-screen-container">
+        <p id="search-screen-close" class="search-screen-close text-right"><i class="fas fa-times"></i></p>
+        <h1>Search</h1>
+        <?php echo facetwp_display( 'facet', 'keywords' ) ?>
+        <?php echo facetwp_display( 'template', 'site_search' ) ?>
+        <?php/* echo facetwp_display( 'pager', 'false' ) */?>
+    </div>
+</div>

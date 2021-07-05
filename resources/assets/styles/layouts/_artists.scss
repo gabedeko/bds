@@ -58,6 +58,9 @@
 
 .artist-container {
     margin-top: 32vh;
+    @media (max-width: 767.98px) {
+        margin-top: 0;
+    }
     .artist-row {
         .artist-col {
             border: 2px solid $bd-tan;

@@ -333,3 +333,42 @@
   .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(250, 243, 221, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
+
+
+.facetwp-template { display: none; }
+.facetwp-template.visible { display: block; }
+
+.facetwp-search {
+  height: 80px;
+  width: 400px;
+  font-size:24px;
+}
+
+.bds-search-btn {
+  cursor: pointer;
+  margin-left: 82%;
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: $bd-grey;
+}
+
+.search-screen {
+  z-index: 9999;
+  background-color: rgba(0,0,0,0.75);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .search-screen-container {
+   .search-screen-close {
+      font-size: 32px;
+      cursor: pointer;
+   } 
+  }
+  &.show {
+    display: flex;
+  }
+}

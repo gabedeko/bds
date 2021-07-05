@@ -33,7 +33,7 @@
     <div class="contact-content-row row justify-content-end">
       <div class="contact-content-col-left col-4 d-flex align-items-center justify-content-center">
         <div class="bd-contact-info">
-          <p>Email: <a href="mailto:blackdancestories@gmail.com">blackdancestories@gmail.com</a></p>
+          <p>Email: <a href="mailto:blackdancestories.info@gmail.com">blackdancestories.info@gmail.com</a></p>
         </div>
         
       </div>

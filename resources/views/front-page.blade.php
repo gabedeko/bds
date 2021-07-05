@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <?php 
 //Query for loop under slide
  $args_0 = array( 
@@ -62,6 +63,16 @@ if ( !wp_is_mobile() ) { //Desktop
 }
 
 ?>
+
+<div id="search-screen" class="search-screen">
+    <div class="search-screen-container">
+        <p id="search-screen-close" class="search-screen-close text-right"><i class="fas fa-times"></i></p>
+        <h1>Search</h1>
+        <?php echo facetwp_display( 'facet', 'keywords' ) ?>
+        <?php echo facetwp_display( 'template', 'site_search' ) ?>
+        <?php/* echo facetwp_display( 'pager', 'false' ) */?>
+    </div>
+</div>
 
 
 <?php

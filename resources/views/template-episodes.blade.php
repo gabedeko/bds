@@ -7,13 +7,16 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
   <?php 
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
  $args_0 = array( 
     'orderby' => 'ID',
     'post_type' =>array('talk'),
     'post_status' => 'publish',
-    'posts_per_page' => 30,
+    'posts_per_page' => 5,
     "orderby" => "date",
     "order" => 'DESC',
+    'paged' => $paged,
  );
  $the_query_0 = new WP_Query( $args_0 );
 
@@ -43,31 +46,44 @@
     </div>
 </div>
 
-    @include('partials.content-page')
+{{--@include('partials.content-page') --}}
 
-<div class="container-fluid episodes-container mt-2">
-<?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
-?>
-    <?php 
-    $content = get_the_content();
-    $content_length = strlen($content);
-    $maxContentLength = 280;
-    ?>
-    <a href="<?php the_permalink(); ?>" class="row episodes-row">
-        <div class="col-md episodes-left">
-            <h3 class="episodes-title"><?php the_title(); ?></h3>
-            <h5 class="episodes-date"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></h5>
-        </div>
-        <div class="col-md episodes-right" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)">
+        <div class="container-fluid episodes-container mt-2">
+        <?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
+        ?>
+            <?php 
+            $content = get_the_content();
+            $content_length = strlen($content);
+            $maxContentLength = 280;
+            ?>
+            <a href="<?php the_permalink(); ?>" class="row episodes-row">
+                <div class="col-md episodes-left">
+                    <h3 class="episodes-title"><?php the_title(); ?></h3>
+                    <h5 class="episodes-date"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></h5>
+                </div>
+                <div class="col-md episodes-right" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)">
 
-        </div>
-    </a>
+                </div>
+            </a>
 
         <?php 
         $query_item_num_1++;
         ?>
-        <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
-        <?php wp_reset_query(); ?>
+        <?php endwhile;    
+
+        $big = 999999999;
+        echo paginate_links( array(
+            'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+            'format' => '?paged=%#%',
+            'current' => max( 1, get_query_var('paged') ),
+            'total' => $the_query_0->max_num_pages,
+            'prev_text' => '&laquo;',
+            'next_text' => '&raquo;'
+        ) );
+
+        else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+            
+        <?php wp_reset_postdata(); ?>
 
         <?php /*
         <div class="row episodes-row">

@@ -54,7 +54,7 @@
       <p class="body-2" style="text-align: center;"><span style="font-weight: 400;">- Carol Dilley, Chair, Department of Theater and Dance/Director of Dance</span></p>
       <h4 class="mt-4">BRING BDS to your University/College</h4>
       
-      <a href="mailto:blackdancestories@gmail.com"><button type="button" class="btn bd-btn-1 btn-lg mt-2">Email Us</button></a>
+      <a href="mailto:blackdancestories.info@gmail.com"><button type="button" class="btn bd-btn-1 btn-lg mt-2">Email Us</button></a>
       </div>
       
   </div>

@@ -5,7 +5,7 @@
 
 <?php
     /*Variables for custom fields*/
-    $name = get_field('name');
+    //$name = get_field('name');
     $photo = get_field('photo');
     $twitter = get_field('twitter');
     $instagram = get_field('instagram');
@@ -45,6 +45,54 @@
         <p class="body-2"><?php echo $desc; ?></p>
       </div>
   </div>
+  <div class="bd-mod-1 mb-3 artist-talk-row">
+  <div class="row">
+
+  <?php 
+  
+  $post_tags = get_the_tags();
+    if ( $post_tags ) {
+        //echo $post_tags[0]->name; 
+        //echo preg_replace('/[^0-9]/', '', $post_tags[0]->name);
+        $episode_number = preg_replace('/[^0-9]/', '', $post_tags[0]->name);
+    }
+        
+        $args = array(
+            'posts_per_page'	=> -1,
+            'post_type' =>array('talk'),
+            'meta_key'		=> 'episode_number',
+            'meta_value'	=> $episode_number
+        );
+
+            // query
+    $the_query = new WP_Query( $args );
+    $query_item_num = 0;
+
+    ?>
+    <?php if( $the_query->have_posts() ): ?>
+        
+        <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+
+
+        <a href="<?php the_permalink(); ?>" class="col-md-4 bd-mod-1-item">
+      <div class="bd-mod-1-top">
+          <div class="bd-mod-1-top-img" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)"></div>
+      </div>
+      <div class="bd-mod-1-btm">
+          <p class="body-2"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></p>
+          <p class="body-1"><?php the_title(); ?></p>
+      </div>
+    </a>
+
+    <?php 
+    $query_item_num++;
+    ?>
+    <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+    <?php wp_reset_query(); ?>
+
+    </div>
+ </div>
   <div class="row justify-content-md-center justify-content-md-center team-profile-social p-5">
   <?php
   if( ! $twitter && ! $instagram && ! $facebook && ! $linkedin && ! $website ){

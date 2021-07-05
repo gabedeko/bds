@@ -272,7 +272,7 @@
     <div class="col-md-4 bd-team-item">
         <div class="bd-team-item-background" style="background-image:url(<?php echo $photo['url']; ?>)">
             <div class="bd-team-item-shade">
-                <h3 class="bd-team-item-name"><?php echo get_field('name'); ?></h3>
+                <h3 class="bd-team-item-name"><?php the_title(); ?></h3>
                 <h4 class="bd-team-item-title"><?php echo $title; ?></h4>
                 <p class="bd-team-item-desc body-3">
                 <?php

@@ -260,6 +260,11 @@
     @media (max-width: 767.98px) {
         height: auto;
     }
+
+    &.artist-talk-row {
+        margin-top: 120px;
+        min-height: 40vh;
+    }
 }
 
 .bd-mod-2 {

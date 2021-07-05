@@ -68,9 +68,16 @@
         
     </div>
   <div class="talk-content-row row justify-content-md-center">
-      <div class="talk-content-col col-md-9">
-        <?php echo the_content(); ?>
-      </div>
+      <?php 
+        if( '' !== get_post()->post_content ) {
+            ?>
+                <div class="talk-content-col col-md-9">
+                    <?php echo the_content(); ?>
+                </div>
+            <?php
+            }
+      ?>
+      
   </div>
   <div class="row justify-content-md-center mt-5 justify-content-md-center">
   <?php
@@ -89,7 +96,6 @@
     ?>
     <?php
     /*Variables for custom fields*/
-    $name = get_field('name');
     $photo = get_field('photo');
     $twitter = get_field('twitter');
     $instagram = get_field('instagram');
@@ -105,7 +111,7 @@
         <div class="col-md-4 bd-artists-item">
         <div class="bd-artists-item-background" style="background-image:url(<?php echo $photo['url']; ?>)">
             <div class="bd-artists-item-shade">
-                <h3 class="bd-artists-item-name"><?php echo $name; ?></h3>
+                <h3 class="bd-artists-item-name"><?php the_title(); ?></h3>
                 <h4 class="bd-artists-item-title"><?php echo $title; ?></h4>
                 <p class="bd-artists-item-desc body-3">
                 <?php

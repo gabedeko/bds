@@ -147,3 +147,17 @@ function truncate($string,$length=100,$append="&hellip;") {
   
     return $string;
   }
+
+add_action( 'wp_head', function() {
+?>
+<script>
+(function($) {
+  $(document).on('facetwp-loaded', function() {
+    if (FWP.loaded) {
+      $('.facetwp-template').addClass('visible');
+    }
+  });
+})(jQuery);
+</script>
+<?php
+}, 100 );
