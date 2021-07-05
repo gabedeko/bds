@@ -97,6 +97,10 @@
         <li class="nav-item">
           <a class="nav-link " href="/contact">Contact</a>
         </li>
+        <li class="nav-item nav-item-search">
+          <?php echo facetwp_display( 'facet', 'keywords_mobile' ) ?>
+          <?php echo facetwp_display( 'template', 'site_search_mobile' ) ?>
+        </li>
       </ul>
     </div>
   </div>
