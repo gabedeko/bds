@@ -336,7 +336,11 @@
 
 
 .facetwp-template { display: none; }
-.facetwp-template.visible { display: block; }
+.facetwp-template.visible { 
+  display: block; 
+  border: 2px solid $bd-tan;
+  padding: 8px;
+}
 
 .search-screen .search-screen-container .facetwp-search {
   height: 80px;
