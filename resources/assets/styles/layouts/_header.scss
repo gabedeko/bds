@@ -276,7 +276,7 @@
 
   .container-fluid {
     @media (min-width: 768px) {
-      padding-right: 0.5vw;
+      padding-right: 2vw;
       padding-left: 17.5vw;
       transition: padding-left ease-in-out .3s;
       &.show-nav {

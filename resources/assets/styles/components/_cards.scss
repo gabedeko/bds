@@ -1,0 +1,22 @@
+.young-artist-card {
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid $bd-tan;
+
+    
+
+    .young-artist-card-top{
+        @media (min-width: 992px) {
+            height:320px;
+        }
+        background-size:cover;
+        background-position:50%50%;
+        background-repeat:no-repeat;
+    }
+    .young-artist-card-btm{
+        display: flex;
+        flex-direction: column;
+        justify-content: Center;
+        align-items: center;
+    }
+}

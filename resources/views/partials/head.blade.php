@@ -26,5 +26,6 @@ global $wp;
     gtag('config', 'G-MBLPMMXRXF');
   </script-->
   <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
   @php wp_head() @endphp
 </head>
