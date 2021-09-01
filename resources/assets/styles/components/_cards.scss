@@ -2,6 +2,8 @@
     border-radius: 0;
     background-color: transparent;
     border: 1px solid $bd-tan;
+    color: $bd-tan;
+    transition: background-color .3s ease-in-out;
 
     
 
@@ -18,5 +20,22 @@
         flex-direction: column;
         justify-content: Center;
         align-items: center;
+            
+        p, h1, h2, h3, h4, h5, div {
+            transition: color .3s ease-in-out;
+            color: $bd-tan;
+        }
+    }
+
+    &:hover {
+        background-color: $bd-tan;
+        transition: background-color .3s ease-in-out;
+
+        .young-artist-card-btm{
+            p, h1, h2, h3, h4, h5, div {
+                transition: color .3s ease-in-out;
+                color: $bd-black;
+            }
+        }
     }
 }

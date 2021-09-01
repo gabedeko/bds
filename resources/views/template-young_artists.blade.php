@@ -52,17 +52,17 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
 
 <div class="container-fluid">
   <div class="row" data-masonry='{"percentPosition": true }'>
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <div class="card young-artist-card">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
+      <a href="/young_artist/ikaros-montana/" class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_1.jpg'));">
         </div>
         <div class="card-body young-artist-card-btm">
           <h5 class="card-title">Ikaros Montana</h5>
           <p class="card-text">Suspendisse ac malesuada nunc, ac vestibulum augue.</p>
         </div>
-      </div>
+      </a>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_2.jpg'));">
         </div>
@@ -72,7 +72,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_3.jpg'));">
         </div>
@@ -82,7 +82,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_4.jpg'));">
         </div>
@@ -92,7 +92,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_5.jpg'));">
         </div>
@@ -102,7 +102,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_6.jpg'));">
         </div>
@@ -112,7 +112,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_7.jpg'));">
         </div>
@@ -122,7 +122,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_8.jpg'));">
         </div>
@@ -132,7 +132,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_9.jpg'));">
         </div>
@@ -142,7 +142,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_10.jpg'));">
         </div>
@@ -152,7 +152,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_11.jpg'));">
         </div>
@@ -162,7 +162,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_12.jpg'));">
         </div>
@@ -172,7 +172,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_13.jpg'));">
         </div>
@@ -182,7 +182,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_14.jpg'));">
         </div>
@@ -192,7 +192,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_15.jpg'));">
         </div>
@@ -202,7 +202,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
+    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_11.jpg'));">
         </div>
@@ -211,6 +211,17 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
           <p class="card-text">In facilisis magna quis mauris tincidunt fringilla.</p>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid young-artist-form-container">
+  <div class="row young-artist-form-row mt-5">
+    <div class="col-md-6 young-artist-form-left p-5 d-flex align-items-center">
+        <p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id laoreet velit. Mauris vitae metus mollis, ultricies massa vel, cursus nibh. Nunc vitae lectus ante. Quisque non vestibulum nisl. In eget augue et massa maximus convallis nec vel sem. Vivamus vitae massa iaculis risus sodales ornare. Curabitur sed ullamcorper velit, ut convallis ante. Aenean ut tincidunt urna, sit amet dictum lorem. In vel interdum justo, non sodales quam. </p>
+    </div>
+    <div class="col-md-6 young-artist-form-right p-5">
+        @include('partials.content-page')
     </div>
   </div>
 </div>
