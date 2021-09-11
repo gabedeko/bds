@@ -1,6 +1,8 @@
 // import external dependencies
 import 'jquery';
 import 'slick-carousel/slick/slick.min.js';
+//import "./bootstrap.min.js";
+//import "./bootstrap-tab.js";
 
 // Import everything from autoload
 import './autoload/**/*'
@@ -68,7 +70,7 @@ $('#nav-icon3').click(function(){
     $('.container-fluid').addClass('show-nav');
   }
 });
-
+//Navbar Toggler
 $('#navbar-toggler').click(function(){
   if ($('#navbarNav').hasClass( 'show' )) {
     $('#navbarNav').removeClass('show');
@@ -77,7 +79,7 @@ $('#navbar-toggler').click(function(){
   }
 });
 
-
+//Search Screen
 $('#search-screen-close').click(function(){
   if ($('#search-screen').hasClass( 'show' )) {
     $('#search-screen').removeClass('show');
@@ -93,3 +95,35 @@ $('#bds-search-btn').click(function(){
     $('#search-screen').addClass('show');
   }
 });
+
+
+//Young Professional Tabs
+(function($){
+  $('#young-link-0').click(function(){
+    //Add active class to tab button
+    $('#young-link-0').addClass('young-active');
+    $('#young-link-1').removeClass('young-active');
+    $('#young-link-2').removeClass('young-active');
+    //Fade in activated tab content
+    $('#young-pane-0').addClass('animate__animated animate__fadeIn');
+    $('#young-pane-0').siblings().removeClass('animate__fadeIn');
+  });
+  $('#young-link-1').click(function(){
+    $('#young-link-1').addClass('young-active');
+    $('#young-link-0').removeClass('young-active');
+    $('#young-link-2').removeClass('young-active');
+
+    $('#young-link-1').siblings().removeClass('young-active');
+    $('#young-pane-1').addClass('animate__animated animate__fadeIn');
+    $('#young-pane-1').siblings().removeClass('animate__fadeIn');
+  });
+  $('#young-link-2').click(function(){
+    $('#young-link-2').addClass('young-active');
+    $('#young-link-0').removeClass('young-active');
+    $('#young-link-1').removeClass('young-active');
+
+    $('#young-link-2').siblings().removeClass('young-active');
+    $('#young-pane-2').addClass('animate__animated animate__fadeIn');
+    $('#young-pane-2').siblings().removeClass('animate__fadeIn');
+  });
+})(jQuery);

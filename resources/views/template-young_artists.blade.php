@@ -42,17 +42,67 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md-12 bd-hero-btm-left">
-            <h1 class="bd-hero-title"><i class="fas fa-circle"></i> Young Artists Experience</h1>
+            <h1 class="bd-hero-title"><i class="fas fa-circle"></i> Young Professional Experience</h1>
         </div>
         <div class="col-md bd-hero-btm-right">
-            
+        
         </div>
     </div>
 </div>
 
 <div class="container-fluid">
-  <div class="row" data-masonry='{"percentPosition": true }'>
-    <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
+  <ul class="nav nav-tabs young-tabs mb-3" id="youngTabs" role="tablist">
+    <li class="nav-item young-tab young-tab-0" role="presentation">
+      <button class="nav-link young-link-0 young-tab-link active" id="young-link-0" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="true">Talks</button>
+    </li>
+    <li class="nav-item young-tab young-tab-1" role="presentation">
+      <button class="nav-link young-link-1 young-tab-link" id="young-link-1" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="false">Professionals</button>
+    </li>
+    <li class="nav-item young-tab young-tab-2" role="presentation">
+      <button class="nav-link young-link-2 young-tab-link" id="young-link-2" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="false">Join</button>
+    </li>
+  </ul>
+</div>
+<div class="container-fluid tab-content young-tab-content" id="youngTabContent">
+    <div class="row young-ep-row tab-pane fade young-pane-0 young-pane animate__animated animate__fadeIn" id="young-pane-0" role="tabpanel" aria-labelledby="home-tab">
+      <div class="young-ep-item">
+        <div class="col-md ep-left">
+            <h3 class="ep-title">Title</h3>
+            <h5 class="ep-date">Date</h5>
+            <p class="ep-desc">Phasellus condimentum dui et convallis iaculis. Nulla imperdiet sapien tincidunt odio consequat, a sollicitudin nisi fringilla. In quis suscipit mi. Aenean id enim varius, gravida risus in, egestas eros. Duis dolor lectus, scelerisque a eros ut, vulputate tempus sapien. Suspendisse interdum tempor cursus. Aenean aliquam luctus diam congue iaculis. </p>
+        </div>
+        <div class="col-md ep-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_20.jpg'))">
+        </div>
+      </div>
+      <div class="young-ep-item">
+        <div class="col-md ep-left">
+            <h3 class="ep-title">Title</h3>
+            <h5 class="ep-date">Date</h5>
+            <p class="ep-desc">Phasellus condimentum dui et convallis iaculis. Nulla imperdiet sapien tincidunt odio consequat, a sollicitudin nisi fringilla. In quis suscipit mi. Aenean id enim varius, gravida risus in, egestas eros. Duis dolor lectus, scelerisque a eros ut, vulputate tempus sapien. Suspendisse interdum tempor cursus. Aenean aliquam luctus diam congue iaculis. </p>
+        </div>
+        <div class="col-md ep-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_21.jpg'))">
+        </div>
+      </div>
+      <div class="young-ep-item">
+        <div class="col-md ep-left">
+            <h3 class="ep-title">Title</h3>
+            <h5 class="ep-date">Date</h5>
+            <p class="ep-desc">Phasellus condimentum dui et convallis iaculis. Nulla imperdiet sapien tincidunt odio consequat, a sollicitudin nisi fringilla. In quis suscipit mi. Aenean id enim varius, gravida risus in, egestas eros. Duis dolor lectus, scelerisque a eros ut, vulputate tempus sapien. Suspendisse interdum tempor cursus. Aenean aliquam luctus diam congue iaculis. </p>
+        </div>
+        <div class="col-md ep-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_22.jpg'))">
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade young-pane-2 young-pane row young-artist-form-row" id="young-pane-2" role="tabpanel" aria-labelledby="contact-tab">
+      <div class="col-md-6 young-artist-form-left p-5 d-flex align-items-center">
+          <p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id laoreet velit. Mauris vitae metus mollis, ultricies massa vel, cursus nibh. Nunc vitae lectus ante. Quisque non vestibulum nisl. In eget augue et massa maximus convallis nec vel sem. Vivamus vitae massa iaculis risus sodales ornare. Curabitur sed ullamcorper velit, ut convallis ante. Aenean ut tincidunt urna, sit amet dictum lorem. In vel interdum justo, non sodales quam. </p>
+      </div>
+      <div class="col-md-6 young-artist-form-right p-5">
+          @include('partials.content-page')
+      </div>
+    </div>
+    <div class="tab-pane fade young-pane-1 young-pane row masonry" id="young-pane-1" role="tabpanel" aria-labelledby="profile-tab" data-masonry='{"percentPosition": true }'>
+      <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <a href="/young_artist/ikaros-montana/" class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_1.jpg'));">
         </div>
@@ -213,20 +263,24 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
       </div>
     </div>
   </div>
+  <div class="row">
+    <a class="text-center" href="https://linktr.ee/blackdancestories" target="_blank"><button type="button" class="btn bd-btn-3">Load More</button></a>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row" data-masonry='{"percentPosition": true }'>
+    
+  </div>
 </div>
 
 <div class="container-fluid young-artist-form-container">
   <div class="row young-artist-form-row mt-5">
-    <div class="col-md-6 young-artist-form-left p-5 d-flex align-items-center">
-        <p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id laoreet velit. Mauris vitae metus mollis, ultricies massa vel, cursus nibh. Nunc vitae lectus ante. Quisque non vestibulum nisl. In eget augue et massa maximus convallis nec vel sem. Vivamus vitae massa iaculis risus sodales ornare. Curabitur sed ullamcorper velit, ut convallis ante. Aenean ut tincidunt urna, sit amet dictum lorem. In vel interdum justo, non sodales quam. </p>
-    </div>
-    <div class="col-md-6 young-artist-form-right p-5">
-        @include('partials.content-page')
-    </div>
+    
   </div>
 </div>
 
 
-
   @endwhile
 @endsection
+

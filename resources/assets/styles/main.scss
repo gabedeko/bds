@@ -1,6 +1,7 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "common/variables";
 
+
 /** Import everything from autoload */
 @import "./autoload/**/*";
 
@@ -20,12 +21,14 @@
 @import "common/global";
 @import "common/fonts";
 @import "common/misc";
+@import "common/animate";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
 @import "components/wp-classes";
 @import "components/slick";
 @import "components/cards";
+@import "components/tabs";
 @import "layouts/about";
 @import "layouts/header";
 @import "layouts/sidebar";

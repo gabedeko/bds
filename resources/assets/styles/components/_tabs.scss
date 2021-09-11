@@ -1,0 +1,24 @@
+.nav-tabs {
+    border-bottom: 1px solid $bd-yellow;
+}
+
+.young-tabs {
+    .young-tab {
+        .young-tab-link {
+            background-color: transparent;
+            border: 1px solid $bd-yellow;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            color: $bd-tan;
+            transition: border .3s ease-in-out;
+            &:hover {
+                border: 1px solid $bd-red;
+                transition: border .3s ease-in-out;
+            }
+            &.young-active {
+                border: 1px solid $bd-red;
+                transition: border .3s ease-in-out;
+            }
+        }
+    }
+}
