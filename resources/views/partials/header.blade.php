@@ -98,8 +98,14 @@
           <a class="nav-link " href="/contact">Contact</a>
         </li>
         <li class="nav-item nav-item-search">
+        <?php
+          if( ! is_page( 49 ) ) {
+            ?>
           <?php echo facetwp_display( 'facet', 'keywords_mobile' ) ?>
           <?php echo facetwp_display( 'template', 'site_search_mobile' ) ?>
+          <?php
+          }
+        ?>
         </li>
       </ul>
     </div>
@@ -111,8 +117,14 @@
     <div class="search-screen-container">
         <p id="search-screen-close" class="search-screen-close text-right"><i class="fas fa-times"></i></p>
         <h1>Search</h1>
-        <?php echo facetwp_display( 'facet', 'keywords' ) ?>
-        <?php echo facetwp_display( 'template', 'site_search' ) ?>
+        <?php
+          if( ! is_page( 49 ) ) {
+            ?>
+              <?php echo facetwp_display( 'facet', 'keywords' ) ?>
+              <?php echo facetwp_display( 'template', 'site_search' ) ?>
+            <?php
+          }
+        ?>
         <?php/* echo facetwp_display( 'pager', 'false' ) */?>
     </div>
 </div>

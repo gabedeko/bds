@@ -1,5 +1,5 @@
 {{--
-  Template Name: Artists Template
+  Template Name: Old Artists Template
 --}}
 
 @extends('layouts.app')

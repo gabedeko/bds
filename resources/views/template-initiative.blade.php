@@ -31,7 +31,18 @@
 
 <div class="init-content-container container-fluid">
     
-  <div class="init-content-row row justify-content-md-center">
+<div class="init-content-row row justify-content-md-center">
+      <div class="init-content-col col-md-9 text-center">
+        <img src="http://blackdancestories.org/wp-content/uploads/2021/09/BDS_YAE_PowerCircle.png" alt="">
+      <p class="body-2 mt-3" style="text-align: center;">The Power Half-Hour series is a part of a new Black Dance Stories initiative—The Young Professionals' Experience—created to highlight emerging Black artists who are impacting the dance field. The series continues BDSs commitment to supporting Black creatives by pairing each artist with an established dance artist. In the spirit of community, the mentors will engage with the artists over six months. The 2021 season Power Half-Hour mentor-mentee pairings are Jawole Jo Zolar and Brooke Rucker; Zane Booker and Johnnie Mercer Cruise; Amy Hall-Garner and Cortney Taylor Key; and Abdel R. Salaam and Dre Drummond. Black Dance Stories' very own emerging creatives Makeda Smith (Director of Digital Media) and Makeda Roney (Director of Production) conceived and produced the new series and initiative.</p>
+
+      <p class="body-2">---</p>
+
+      <p class="body-2">Watch the first episode on <a href="https://www.instagram.com/blackdancestories/?hl=en" target="_blank" style="text-decoration:underline;">Instagram Live</a> Next Mon, Sep 27 at 12 pm EST</p>
+      </div>
+  </div>
+
+  <div class="init-content-row row justify-content-md-center mt-5">
       <div class="init-content-col col-md-9 text-center">
       <h2>BDS Kiki - for young African American Dance Artists</h2>
       <p class="body-2 mt-3" style="text-align: center;">“There are almost no live dance performances taking place right now. An invaluable part of these live performances are the conversations we emerging artists get to have with choreographers and artists, after a performance. Because of COVID, these conversations have stopped happening in this way. Thus! Black Dance Stories Kiki was born. I remember telling Charmaine and Kimani about how nerve-racking it can be to network after a performance. So we came together and thought of the Kiki. The artists that have been a part of Black Dance Stories come back and mentor these young emerging artists."</p>

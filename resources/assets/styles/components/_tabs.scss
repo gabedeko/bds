@@ -12,11 +12,11 @@
             color: $bd-tan;
             transition: border .3s ease-in-out;
             &:hover {
-                border: 1px solid $bd-red;
+                border: 1px solid $bd-green;
                 transition: border .3s ease-in-out;
             }
             &.young-active {
-                border: 1px solid $bd-red;
+                border: 1px solid $bd-green;
                 transition: border .3s ease-in-out;
             }
         }

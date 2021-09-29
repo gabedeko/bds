@@ -1,5 +1,5 @@
 {{--
-  Template Name: Young Artists Template
+  Template Name: Young Professional Template
 --}}
 
 <?php /*
@@ -20,13 +20,25 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
     $args_0 = array( 
         'orderby' => 'title',
         'order'   => 'DESC',
-        'post_type' =>array('artist'),
+        'post_type' =>array('young_professional'),
         'post_status' => 'publish',
         'posts_per_page' => 20,
     );
     $the_query_0 = new WP_Query( $args_0 );
+    $query_item_num_0 = 0;
+  ?>
+  <?php 
+    $args_1 = array( 
+        'orderby' => 'title',
+        'order'   => 'DESC',
+        'post_type' =>array('young_professional'),
+        'post_status' => 'publish',
+        'posts_per_page' => 20,
+    );
+    $the_query_1 = new WP_Query( $args_1 );
     $query_item_num_1 = 0;
-    ?>
+  ?>
+
 
 <div class="bd-hero bd-hero-2 container-fluid mt-2">
     <div class="row bd-hero-top">
@@ -53,10 +65,10 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
 <div class="container-fluid">
   <ul class="nav nav-tabs young-tabs mb-3" id="youngTabs" role="tablist">
     <li class="nav-item young-tab young-tab-0" role="presentation">
-      <button class="nav-link young-link-0 young-tab-link active" id="young-link-0" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="true">Talks</button>
+      <button class="nav-link young-link-0 young-tab-link active" id="young-link-0" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="true">Power Half-Hour</button>
     </li>
     <li class="nav-item young-tab young-tab-1" role="presentation">
-      <button class="nav-link young-link-1 young-tab-link" id="young-link-1" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="false">Professionals</button>
+      <button class="nav-link young-link-1 young-tab-link" id="young-link-1" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="false">The YPE Journals</button>
     </li>
     <li class="nav-item young-tab young-tab-2" role="presentation">
       <button class="nav-link young-link-2 young-tab-link" id="young-link-2" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="false">Join</button>
@@ -65,15 +77,33 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
 </div>
 <div class="container-fluid tab-content young-tab-content" id="youngTabContent">
     <div class="row young-ep-row tab-pane fade young-pane-0 young-pane animate__animated animate__fadeIn" id="young-pane-0" role="tabpanel" aria-labelledby="home-tab">
+      
+    <?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
+?>
+    <?php
+    $power = get_field('power_half_hour');
+    if ($power == "yes"){
+      ?>
+
       <div class="young-ep-item">
         <div class="col-md ep-left">
-            <h3 class="ep-title">Title</h3>
+            <h3 class="ep-title"><?php the_title(); ?></h3>
             <h5 class="ep-date">Date</h5>
-            <p class="ep-desc">Phasellus condimentum dui et convallis iaculis. Nulla imperdiet sapien tincidunt odio consequat, a sollicitudin nisi fringilla. In quis suscipit mi. Aenean id enim varius, gravida risus in, egestas eros. Duis dolor lectus, scelerisque a eros ut, vulputate tempus sapien. Suspendisse interdum tempor cursus. Aenean aliquam luctus diam congue iaculis. </p>
+            <p class="ep-desc">Success </p>
         </div>
         <div class="col-md ep-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_20.jpg'))">
         </div>
       </div>
+    <?php } ?>
+      <?php 
+    $query_item_num_0++;
+    ?>
+    <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+    <?php wp_reset_query(); ?>
+    
+
+    
+      
       <div class="young-ep-item">
         <div class="col-md ep-left">
             <h3 class="ep-title">Title</h3>
@@ -95,23 +125,46 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
     </div>
     <div class="tab-pane fade young-pane-2 young-pane row young-artist-form-row" id="young-pane-2" role="tabpanel" aria-labelledby="contact-tab">
       <div class="col-md-6 young-artist-form-left p-5 d-flex align-items-center">
-          <p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id laoreet velit. Mauris vitae metus mollis, ultricies massa vel, cursus nibh. Nunc vitae lectus ante. Quisque non vestibulum nisl. In eget augue et massa maximus convallis nec vel sem. Vivamus vitae massa iaculis risus sodales ornare. Curabitur sed ullamcorper velit, ut convallis ante. Aenean ut tincidunt urna, sit amet dictum lorem. In vel interdum justo, non sodales quam. </p>
+          <p class="body-2">
+          <?php
+          $form_copy = get_field('form_copy');
+          echo $form_copy;
+          ?>
+          </p>
       </div>
       <div class="col-md-6 young-artist-form-right p-5">
           @include('partials.content-page')
       </div>
     </div>
     <div class="tab-pane fade young-pane-1 young-pane row masonry" id="young-pane-1" role="tabpanel" aria-labelledby="profile-tab" data-masonry='{"percentPosition": true }'>
-      <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
-      <a href="/young_artist/ikaros-montana/" class="card young-artist-card">
-        <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_1.jpg'));">
+
+    <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post();
+?>
+    <?php
+    $power = get_field('power_half_hour');
+    if ($power == "no"){
+      ?>
+        <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
+          <a href="/young_artist/ikaros-montana/" class="card young-artist-card">
+            <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_1.jpg'));">
+            </div>
+            <div class="card-body young-artist-card-btm">
+              <h5 class="card-title"><?php the_title(); ?></h5>
+              <p class="card-text">Success</p>
+              <p><?php echo $power; ?></p>
+            </div>
+          </a>
         </div>
-        <div class="card-body young-artist-card-btm">
-          <h5 class="card-title">Ikaros Montana</h5>
-          <p class="card-text">Suspendisse ac malesuada nunc, ac vestibulum augue.</p>
-        </div>
-      </a>
-    </div>
+      <?php
+    }
+    ?>
+
+    <?php 
+    $query_item_num_1++;
+    ?>
+    <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
+    <?php wp_reset_query(); ?>
+      
     <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_2.jpg'));">
@@ -263,21 +316,11 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
       </div>
     </div>
   </div>
+  <?php /*
   <div class="row">
     <a class="text-center" href="https://linktr.ee/blackdancestories" target="_blank"><button type="button" class="btn bd-btn-3">Load More</button></a>
   </div>
-</div>
-
-<div class="container-fluid">
-  <div class="row" data-masonry='{"percentPosition": true }'>
-    
-  </div>
-</div>
-
-<div class="container-fluid young-artist-form-container">
-  <div class="row young-artist-form-row mt-5">
-    
-  </div>
+  */ ?>
 </div>
 
 

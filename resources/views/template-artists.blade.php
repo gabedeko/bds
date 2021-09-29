@@ -42,9 +42,9 @@
     </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row justify-content-md-center">
-      <div class="col-md-12 mt-4">
+<div class="container-fluid artist-facet-container">
+  <div class="row justify-content-md-center artist-facet-row">
+      <div class="col-md-12 mt-4 artist-facet-col">
         @include('partials.content-page')
       </div>
   </div>
