@@ -7,7 +7,7 @@
 //Query for loop under slide
  $args_0 = array( 
     'orderby' => 'ID',
-    'post_type' =>array('talk','young_professional'),
+    'post_type' =>array('talk'), //add ,'young_professional'
     'post_status' => 'publish',
     'posts_per_page' => 3,
     'offset' => 3,
@@ -21,7 +21,7 @@
 //Query for slide
 $args_1 = array( 
     'orderby' => 'ID',
-    'post_type' =>array('talk','young_professional'),
+    'post_type' =>array('talk'), //add ,'young_professional'
     'post_status' => 'publish',
     'posts_per_page' => 3,
     "orderby" => "date",

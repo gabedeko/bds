@@ -11,6 +11,7 @@
             border-top-right-radius: 0;
             color: $bd-tan;
             transition: border .3s ease-in-out;
+            text-transform: uppercase;
             &:hover {
                 border: 1px solid $bd-green;
                 transition: border .3s ease-in-out;
