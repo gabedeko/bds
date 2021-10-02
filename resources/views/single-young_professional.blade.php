@@ -6,14 +6,14 @@
 <?php
     /*Variables for custom fields*/
     //$name = get_field('name');
+    $yp_desc = get_field('yp_desc');
+    $power_half_hour = get_field('power_half_hour');
+    $pronouns = get_field('pronouns');
     $photo = get_field('photo');
-    $twitter = get_field('twitter');
-    $instagram = get_field('instagram');
-    $facebook = get_field('facebook');
-    $linkedin = get_field('linkedin');
-    $desc = get_field('description');
-    $title = get_field('artist_title');
-    $website = get_field('website');
+    $project = get_field('project');
+    $share_story_media = get_field('share_story_media');
+    $share_story_text = get_field('share_story_text');
+    $power_half_hour_video = get_field('power_half_hour_video');
 ?>
 
 
@@ -22,39 +22,61 @@
         <div class="col-md-7 bd-hero-top-left">
             <div class="bd-hero-border"></div>
             <div class="bd-hero-date">
-                <p class="body-2"><i class="fas fa-circle"></i> Choreographer</p>
+                <p class="body-2"><i class="fas fa-circle"></i> <?php echo $pronouns ?></p>
             </div>
         </div>
-        <div class="col-md-5 bd-hero-top-right" style="background-image:url(@asset('images/ya/young_artist_1.jpg'));">
+        <div class="col-md-5 bd-hero-top-right" style="background-image:url(<?php echo esc_url($photo['url']) ?>);">
         
         </div>
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md bd-hero-btm-left">
-            <h1 class="bd-hero-title">YA - <?php the_title(); ?></h1>
-        </div>
-        <div class="col-md bd-hero-btm-right">
-            
+            <h5 class="bd-hero-title">Young  Professionals</h5>
+            <h1 class="bd-hero-title"><?php the_title(); ?></h1>
         </div>
     </div>
 </div>
 
 <div class="young-artist-container container-fluid">
-  <div class="young-artist-row row">
+<? if ($power_half_hour == "yes" ){
+    ?>
+
+  <div class="young-artist-phh-row row">
       <div class="young-artist-left col-md-6">
-        <p class="body-2">2. One sentence on why Black Dance Stories is incredibly important to OUR community and the dance community as a whole. I keep going back to our mission.  That ok?</p>
-        <p class="body-2">    3.  2-3 facts about you our community wouldn’t know from your bio. I enjoy creating community through my teaching. In my healing practice I also apply the idea of creating community in bringing the aspects of a person together to create peace, acceptance and harmony in themselves which they can then share with others. RJ</p>
-        <p class="body-2">
-        4. Information about other incredible projects you are currently working on outside of BDS. I just successfully completed co-teaching a course called Consent in Academia for Intimacy Directors and Choreographers and I look forward to more collaborations with them. RJ
-        </p>
-        
+        <div class="col-md bd-hero-btm-right">
+            <p class="body-2"><?php echo $yp_desc ?></p>
+        </div>
       </div>
-      <div class="young-artist-right col-md-6">
-        <iframe id="" class="bd-talk-video" width="" height="560" src="https://www.youtube.com/embed/xU5MQaRls80" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="young-artist-right col-md-6 d-flex align-items-center">
+        <iframe id="" class="bd-talk-video" width="" height="560" src="https://www.youtube.com/embed/<?php echo $power_half_hour_video ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
   </div>
+    <?php
+}
+?>
+    <hr class="bd-hr-0">
+    <div class="row young-artist-project-row mt-4">
+        <h5 class="">Project</h5>
+        <h2><?php echo $project ?></h2>
+        <?php
+        if ($share_story_media) { ?>
+        <div class="share-story-media"></div>
+        
+            <img src="<?php echo esc_url($share_story_media['url']); ?>" alt="">
+        <?php
+        }
+        ?> 
+        <?php
+        if ($share_story_text) { ?>
+        <div class="share-story-text mt-4"></div>
+        <?php
+            echo $share_story_text;
+        }
+        ?>
+    </div>
 
-  <div class="row justify-content-md-center justify-content-md-center team-profile-social p-5">
+  <?php /*
+  <div class="row justify-content-md-center justify-content-md-center team-profile-social young-artist-social-row p-5">
     <h1 class="text-center team-profile-social-title mb-5">Social Profiles</h1>
     <div class="col-md team-profile-social-col text-center">
         <h1><a href="https://twitter.com/<?php echo $twitter ?>"><i class="fab fa-twitter" target="_blank"></i></a></h1>
@@ -68,6 +90,7 @@
         <h1><a href="https://www.facebook.com/<?php echo $facebook ?>/" target="_blank"><i class="fab fa-facebook-f"></i></a></h1>
         <h4>Facebook</h4>
     </div>
+    */ ?>
   <?php /*
   if( ! $twitter && ! $instagram && ! $facebook && ! $linkedin && ! $website ){
       

@@ -6,6 +6,7 @@
     margin: 0 0 24px 0;
     .bd-hero-top {
         height: 68%;
+        padding: 0 12px;
         .bd-hero-top-left {
             height: 100%;
             display: flex;
@@ -58,6 +59,7 @@
     }
     .bd-hero-btm {
         height: 32%;
+        padding: 0 12px;
         .bd-hero-btm-left {
             border-bottom:2px solid $bd-yellow;
             .bd-hero-title {

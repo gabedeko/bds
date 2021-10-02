@@ -46,11 +46,10 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
           <div class="bd-hero-border"></div>
           <div class="bd-hero-date"></div>
         </div>
-        <div class="col-md bd-hero-top-right ype-top-right" style="background-image:url(<?php echo get_the_post_thumbnail_url( $page->ID, 'full' ) ?>)">
-        </div>
-        <?php /*
-        <div class="col-md-8 bd-hero-top-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_32.jpg'))">
         
+        <?php /*
+        <div class="col-md bd-hero-top-right ype-top-right" style="background-image:url(<?php echo get_the_post_thumbnail_url( $page->ID, 'full' ) ?>)">
+        </div>        
         </div>
         */ ?>
     </div>
@@ -83,19 +82,39 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
     <?php if ( $the_query_0->have_posts() ) : while ( $the_query_0->have_posts() ) : $the_query_0->the_post();
 ?>
     <?php
-    $power = get_field('power_half_hour');
-    if ($power == "yes"){
+    $yp_desc = get_field('yp_desc');
+    $power_half_hour = get_field('power_half_hour');
+    $pronouns = get_field('pronouns');
+    $photo = get_field('photo');
+    $project = get_field('project');
+    $share_story_media = get_field('share_story_media');
+    $share_story_text = get_field('share_story_text');
+    $power_half_hour_video = get_field('power_half_hour_video');
+    //Crop description at whitespace
+    $desc_length = strlen($yp_desc);
+    $maxDescLength = 320;
+
+    if ($power_half_hour == "yes"){
       ?>
 
-      <div class="young-ep-item">
+      <a class="young-ep-item" href="<?php the_permalink(); ?>">
         <div class="col-md ep-left">
             <h3 class="ep-title"><?php the_title(); ?></h3>
-            <h5 class="ep-date">Date</h5>
-            <p class="ep-desc">Success </p>
+            <h5 class="ep-date"><?php the_date('l, F j, Y'); ?></h5>
+            <p class="ep-desc"><?php 
+            //Crop description at whitespace 
+                if ($desc_length > $maxDescLength) {
+                  echo substr($yp_desc, 0, strrpos($yp_desc, ' ', $maxDescLength-$desc_length));
+                  echo "...";
+              } else {
+                  echo $yp_desc;
+              }
+             ?></p>
+            
         </div>
-        <div class="col-md ep-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_20.jpg'))">
+        <div class="col-md ep-right" style="background-image:url(<?php echo esc_url($photo['url']) ?>)">
         </div>
-      </div>
+      </a>
     <?php } ?>
       <?php 
     $query_item_num_0++;
@@ -103,7 +122,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
     <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
     <?php wp_reset_query(); ?>
     
-      
+      <?php /*
       <div class="young-ep-item">
         <div class="col-md ep-left">
             <h3 class="ep-title">Title</h3>
@@ -113,6 +132,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         <div class="col-md ep-right" style="background-image:url(@asset('images/placeholder/bd_placeholder_21.jpg'))">
         </div>
       </div>
+      */ ?>
     </div>
     <div class="tab-pane fade young-pane-2 young-pane row young-artist-form-row" id="young-pane-2" role="tabpanel" aria-labelledby="contact-tab">
       <div class="col-md-6 young-artist-form-left p-5 d-flex align-items-center">
@@ -134,17 +154,24 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
     <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post();
 ?>
     <?php
-    $power = get_field('power_half_hour');
-    if ($power == "no"){
+    $yp_desc_ = get_field('yp_desc');
+    $power_half_hour_ = get_field('power_half_hour');
+    $pronouns_ = get_field('pronouns');
+    $photo_ = get_field('photo');
+    $project_ = get_field('project');
+    $share_story_media_ = get_field('share_story_media');
+    $share_story_text_ = get_field('share_story_text');
+    $power_half_hour_video_ = get_field('power_half_hour_video');
+
+    if ($power_half_hour_ == "no"){
       ?>
         <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
-          <a href="/young_artist/ikaros-montana/" class="card young-artist-card">
-            <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_1.jpg'));">
+          <a href="<?php the_permalink(); ?>" class="card young-artist-card">
+            <div class="young-artist-card-top" style="background-image:url(<?php echo esc_url($photo_['url']) ?>);">
             </div>
             <div class="card-body young-artist-card-btm">
-              <h5 class="card-title"><?php the_title(); ?></h5>
-              <p class="card-text">Success</p>
-              <p><?php echo $power; ?></p>
+              <h4 class="card-title"><?php the_title(); ?></h4>
+              <h5 class="card-text text-center"><?php echo $pronouns_ ?></h5>
             </div>
           </a>
         </div>
@@ -157,7 +184,8 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
     ?>
     <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
     <?php wp_reset_query(); ?>
-      
+    
+    <?php /*
     <div class="col-sm-6 col-lg-4 mb-4 young-artist-card-col">
       <div class="card young-artist-card">
         <div class="young-artist-card-top" style="background-image:url(@asset('images/ya/young_artist_2.jpg'));">
@@ -168,7 +196,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
         </div>
       </div>
     </div>
-    
+    */ ?>
   </div>
   <?php /*
   <div class="row">

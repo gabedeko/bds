@@ -153,3 +153,11 @@ body {
         color: $bd-grey;
     }
 }
+
+.bd-hr-0 {
+    color: $bd-tan;
+    background-color: $bd-tan;
+    border: solid 2px $bd-tan;
+    height: 2px;
+    border: none;
+}

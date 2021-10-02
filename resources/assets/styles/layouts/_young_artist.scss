@@ -10,6 +10,7 @@
 
 .young-tab-content {
     .young-pane {
+        padding: 0 12px;
         display:none;
         &.animate__fadeIn {
             display: flex;
@@ -72,5 +73,16 @@
                 transition: background-position ease-in-out .3s;
             }
         }
+    }
+}
+
+.young-artist-container {
+    .young-artist-phh-row {
+
+    }
+    .young-artist-project-row {
+    }
+    .young-artist-social-row {
+
     }
 }
