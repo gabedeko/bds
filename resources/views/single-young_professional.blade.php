@@ -38,7 +38,7 @@
 </div>
 
 <div class="young-artist-container container-fluid">
-<? if ($power_half_hour == "yes" ){
+<?php if ($power_half_hour == "yes" ){
     ?>
 
   <div class="young-artist-phh-row row">
@@ -75,74 +75,68 @@
         ?>
     </div>
 
-  <?php /*
+  
   <div class="row justify-content-md-center justify-content-md-center team-profile-social young-artist-social-row p-5">
-    <h1 class="text-center team-profile-social-title mb-5">Social Profiles</h1>
-    <div class="col-md team-profile-social-col text-center">
-        <h1><a href="https://twitter.com/<?php echo $twitter ?>"><i class="fab fa-twitter" target="_blank"></i></a></h1>
-        <h4>Twitter</h4>
-    </div>
-    <div class="col-md team-profile-social-col text-center">
-        <h1><a href="https://www.instagram.com/<?php echo $instagram ?>/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></h1>
-        <h4>Instagram</h4>
-    </div>
-    <div class="col-md team-profile-social-col text-center">     
-        <h1><a href="https://www.facebook.com/<?php echo $facebook ?>/" target="_blank"><i class="fab fa-facebook-f"></i></a></h1>
-        <h4>Facebook</h4>
-    </div>
-    */ ?>
-  <?php /*
-  if( ! $twitter && ! $instagram && ! $facebook && ! $linkedin && ! $website ){
-      
-  } else {
-      ?>
-        <h1 class="text-center team-profile-social-title mb-5">Social Profiles</h1>
-      <?php
-  }
-  ?>
   <?php 
-if( $twitter) {
-    ?>
-    <div class="col-md team-profile-social-col text-center">
-        <h1><a href="https://twitter.com/<?php echo $twitter ?>"><i class="fab fa-twitter" target="_blank"></i></a></h1>
-        <h4>Twitter</h4>
-    </div>
-    <?php
-}
-if( $instagram) {
-    ?>
-    <div class="col-md team-profile-social-col text-center">
-        <h1><a href="https://www.instagram.com/<?php echo $instagram ?>/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></h1>
-        <h4>Instagram</h4>
-    </div>
-    <?php
-}
-if( $facebook) {
-    ?>
-    <div class="col-md team-profile-social-col text-center">     
-        <h1><a href="https://www.facebook.com/<?php echo $facebook ?>/" target="_blank"><i class="fab fa-facebook-f"></i></a></h1>
-        <h4>Facebook</h4>
+    $twitter = get_field('twitter');
+    $instagram = get_field('instagram');
+    $facebook = get_field('facebook');
+    $linkedin = get_field('linkedin');
+    $website = get_field('website');
+    
+        if( ! $twitter && ! $instagram && ! $facebook && ! $linkedin && ! $website ){
+            
+        } else {
+            ?>
+                <h1 class="text-center team-profile-social-title mb-5">Social Profiles</h1>
+            <?php
+        }
+        ?>
+        <?php 
+        if( $twitter) {
+            ?>
+            <div class="col-md team-profile-social-col text-center">
+                <h1><a href="https://twitter.com/<?php echo $twitter ?>"><i class="fab fa-twitter" target="_blank"></i></a></h1>
+                <h4>Twitter</h4>
+            </div>
+            <?php
+        }
+        if( $instagram) {
+            ?>
+            <div class="col-md team-profile-social-col text-center">
+                <h1><a href="https://www.instagram.com/<?php echo $instagram ?>/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></h1>
+                <h4>Instagram</h4>
+            </div>
+            <?php
+        }
+        if( $facebook) {
+            ?>
+            <div class="col-md team-profile-social-col text-center">     
+                <h1><a href="https://www.facebook.com/<?php echo $facebook ?>/" target="_blank"><i class="fab fa-facebook-f"></i></a></h1>
+                <h4>Facebook</h4>
 
-    </div>
-    <?php
-}
-if( $linkedin) {
-    ?>
-    <div class="col-md team-profile-social-col text-center">
-        <h1><a href="<?php echo $linkedin ?>"  target="_blank"><i class="fab fa-linkedin-in"></i></h1>
-        <h4>LinkedIn</h4>
-    </div>
-    <?php
-}
-if( $website) {
-    ?>
-    <div class="col-md team-profile-social-col text-center">
-        <h1><a href="<?php echo $website ?>"  target="_blank"><i class="fas fa-globe"></i></a></h1>
-        <h4>Website</h4>
-    </div>
-    <?php
-}
-  */ ?>
+            </div>
+            <?php
+        }
+        if( $linkedin) {
+            ?>
+            <div class="col-md team-profile-social-col text-center">
+                <h1><a href="<?php echo $linkedin ?>"  target="_blank"><i class="fab fa-linkedin-in"></i></h1>
+                <h4>LinkedIn</h4>
+            </div>
+            <?php
+        }
+        if( $website) {
+            ?>
+            <div class="col-md team-profile-social-col text-center">
+                <h1><a href="<?php echo $website ?>"  target="_blank"><i class="fas fa-globe"></i></a></h1>
+                <h4>Website</h4>
+            </div>
+            <?php
+        }
+   ?>
+
+  
   </div>
 </div>
 @endwhile

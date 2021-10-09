@@ -132,6 +132,7 @@ add_action( 'init', function() {
     remove_post_type_support('team', 'editor');
     remove_post_type_support('artist', 'editor');
     remove_post_type_support('young_professional', 'editor');
+    remove_post_type_support('professional', 'editor');
 }, 99);
 
 //Remove Gutenburg Editor

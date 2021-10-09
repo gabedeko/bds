@@ -38,7 +38,7 @@
   <h3 class="bd-menu-item"><a href="/artists" class="bd-menu-link">Artists</a></h3>
   <h3 class="bd-menu-item"><a href="/news" class="bd-menu-link">News & Press</a></h3>
   <h3 class="bd-menu-item"><a href="/initiatives" class="bd-menu-link">BDS Initiatives</a></h3>
-  <?php /*<h3 class="bd-menu-item"><a href="/we-name-the-names" class="bd-menu-link">Name the Names</a></h3> */ ?>
+  <h3 class="bd-menu-item"><a href="/young-professional-experience" class="bd-menu-link">Young Professionals</a></h3>
   <h3 class="bd-menu-item"><a href="https://www.iabdassociation.org/donations/fund.asp?id=19911" target="_blank" class="bd-menu-link">Donate</a></h3>
   <h3 class="bd-menu-item"><a href="/about" class="bd-menu-link">About</a></h3>
   <h3 class="bd-menu-item bd-menu-item-last"><a href="/contact" class="bd-menu-link">Contact</a></h3>
@@ -83,11 +83,9 @@
         <li class="nav-item">
           <a class="nav-link " href="/initiatives">BDS Initiatives</a>
         </li>
-        <?php /*
         <li class="nav-item">
-          <a class="nav-link " href="/we-name-the-names">Name the Names</a>
+          <a class="nav-link " href="/young-professional-experience">Young Professionals</a>
         </li>
-        */ ?>
         <li class="nav-item">
           <a class="nav-link " href="https://www.iabdassociation.org/donations/fund.asp?id=19911" target="_blank">Donate</a>
         </li>

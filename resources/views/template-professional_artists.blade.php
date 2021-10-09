@@ -47,11 +47,15 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
           <div class="bd-hero-date"></div>
         </div>
         
-        <?php /*
-        <div class="col-md bd-hero-top-right ype-top-right" style="background-image:url(<?php echo get_the_post_thumbnail_url( $page->ID, 'full' ) ?>)">
-        </div>        
+        <div id="ype-circle-logo" class="col-md bd-hero-top-right ype-top-right ype-circle-logo animate__animated animate__fadeIn" style="background-image:url(@asset('images/ya/BDS_YPE_CircleBanner.png')">
         </div>
-        */ ?>
+        <div id="ype-journal-logo" class="col-md bd-hero-top-right ype-top-right ype-journal-logo" style="background-image:url(@asset('images/ya/BDS_YPE_Journal_Logo_Pick.png')">
+        </div> 
+        <div id="ype-banner-logo" class="col-md bd-hero-top-right ype-top-right ype-banner-logo" style="background-image:url(@asset('images/ya/BDS_YPE_Banner_2.png')">
+        </div>
+          
+        
+        
     </div>
     <div class="row bd-hero-btm">
         <div class="col-md-12 bd-hero-btm-left">

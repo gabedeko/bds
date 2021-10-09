@@ -121,7 +121,16 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
         </div>
         <div class="col-md-8 bd-hero-top-right multiple-items">
             <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post(); ?>
-                <a href="<?php the_permalink(); ?>" class="bd-hero-top-right-bg" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)"></a>
+                <a href="<?php the_permalink(); ?>" class="bd-hero-top-right-bg" style="background-image:url(
+                    <?php 
+                    if ( has_post_thumbnail() ) {
+                        echo get_the_post_thumbnail_url(get_the_ID(),'full');
+                    } else {
+                        $yp_photo = get_field('photo');
+                        echo esc_url($yp_photo['url']);
+                    }
+                    ?>
+                    )"></a>
             <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
             <?php wp_reset_query(); ?>
                 <?php /*<a href="/talk/talk-test" class="bd-hero-top-right-bg" style="background-image:url(@asset('images/placeholder/bd_placeholder_8.jpg'))"></a> */ ?>
@@ -162,7 +171,17 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
 ?>
     <a href="<?php the_permalink(); ?>" class="col-md-4 bd-mod-1-item">
       <div class="bd-mod-1-top">
-          <div class="bd-mod-1-top-img" style="background-image:url(<?php echo get_the_post_thumbnail_url(get_the_ID(),'full');  ?>)"></div>
+          <div class="bd-mod-1-top-img" style="background-image:url(
+              <?php
+
+                if ( has_post_thumbnail() ) {
+                    echo get_the_post_thumbnail_url(get_the_ID(),'full');
+                } else {
+                    $yp_photo = get_field('photo');
+                    echo esc_url($yp_photo['url']);
+                }
+                ?>
+           )"></div>
       </div>
       <div class="bd-mod-1-btm">
           <p class="body-2"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></p>

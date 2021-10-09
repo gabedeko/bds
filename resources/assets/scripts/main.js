@@ -107,6 +107,11 @@ $('#bds-search-btn').click(function(){
     //Fade in activated tab content
     $('#young-pane-0').addClass('animate__animated animate__fadeIn');
     $('#young-pane-0').siblings().removeClass('animate__fadeIn');
+    //Swap out logos
+    $('#ype-circle-logo').addClass('animate__animated animate__fadeIn');
+    $('#ype-journal-logo').removeClass('ype-logo-active animate__fadeIn');
+    $('#ype-banner-logo').removeClass('ype-logo-active animate__fadeIn');
+    
   });
   $('#young-link-1').click(function(){
     $('#young-link-1').addClass('young-active');
@@ -116,6 +121,10 @@ $('#bds-search-btn').click(function(){
     $('#young-link-1').siblings().removeClass('young-active');
     $('#young-pane-1').addClass('animate__animated animate__fadeIn');
     $('#young-pane-1').siblings().removeClass('animate__fadeIn');
+
+    $('#ype-journal-logo').addClass('animate__animated animate__fadeIn');
+    $('#ype-circle-logo').removeClass('ype-logo-active animate__fadeIn');
+    $('#ype-banner-logo').removeClass('ype-logo-active animate__fadeIn');
   });
   $('#young-link-2').click(function(){
     $('#young-link-2').addClass('young-active');
@@ -125,5 +134,9 @@ $('#bds-search-btn').click(function(){
     $('#young-link-2').siblings().removeClass('young-active');
     $('#young-pane-2').addClass('animate__animated animate__fadeIn');
     $('#young-pane-2').siblings().removeClass('animate__fadeIn');
+
+    $('#ype-banner-logo').addClass('animate__animated animate__fadeIn');
+    $('#ype-journal-logo').removeClass('ype-logo-active animate__fadeIn');
+    $('#ype-circle-logo').removeClass('ype-logo-active animate__fadeIn');
   });
 })(jQuery);

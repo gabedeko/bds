@@ -86,3 +86,10 @@
 
     }
 }
+
+.ype-top-right {
+    display: none;
+    &.animate__fadeIn {
+        display: block;
+    }
+}
