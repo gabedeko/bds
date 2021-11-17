@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="col-md bd-footer-right">
-      <p class="body-3 bd-copyright">© Copyright Black Dance Stories 2021.</p>
+      <p class="body-3 bd-copyright text-center">© Copyright Black Dance Stories 2021.</p>
     </div>
     </div>
 
