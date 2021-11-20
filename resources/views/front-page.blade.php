@@ -121,7 +121,20 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
         </div>
         <div class="col-md-8 bd-hero-top-right multiple-items">
             <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post(); ?>
-                <a href="<?php the_permalink(); ?>" class="bd-hero-top-right-bg" style="background-image:url(
+                <a href="<?php the_permalink(); ?>" class="bd-hero-top-right-bg 
+                <?php
+                if ( 'talk' == get_post_type() ) {
+                    ?>
+                    bd-hero-talk-bg
+                    <?php
+                } elseif ( 'young_professional' == get_post_type() ) {
+                    ?>
+                    bd-hero-young-professional-bg
+                    <?php
+                }
+                ?>
+                
+                " style="background-image:url(
                     <?php 
                     if ( has_post_thumbnail() ) {
                         echo get_the_post_thumbnail_url(get_the_ID(),'full');

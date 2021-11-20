@@ -20,7 +20,7 @@
 
 
 <div class="bd-hero container-fluid mt-2">
-    <div class="row bd-hero-top">
+    <div class="row bd-hero-top bd-hero-top-talk">
         <div class="col-md-4 bd-hero-top-left">
             <div class="bd-hero-border"></div>
             <div class="bd-hero-date">

@@ -3,6 +3,13 @@
         height: 100%;
         .slick-track {
             height: 100%;
+            .slick-slide {
+                &.bd-hero-talk-bg {
+                    @media (max-width: 767.98px) {
+                        height: 40%; 
+                    }
+                }
+            }
         }
     }
     .slick-dots li button::before {
