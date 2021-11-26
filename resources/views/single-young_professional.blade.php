@@ -41,15 +41,27 @@
 <?php if ($power_half_hour == "yes" ){
     ?>
 
-  <div class="young-artist-phh-row row">
-      <div class="young-artist-left col-md-6">
-        <div class="col-md bd-hero-btm-right">
-            <p class="body-2"><?php echo $yp_desc ?></p>
-        </div>
-      </div>
-      <div class="young-artist-right col-md-6 d-flex align-items-center">
+  <div class="young-artist-phh-video-row row mb-5">
+  <?php if ($power_half_hour_video != null ){
+    ?>
+        <div class="young-artist-phh-video col-md align-items-center mb-3">
         <iframe id="" class="bd-talk-video" width="" height="560" src="https://www.youtube.com/embed/<?php echo $power_half_hour_video ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <?php
+    } else {
+    ?>
+        <a class="phh-placeholder-link" href="https://www.instagram.com/blackdancestories/" target="_blank">
+            <img class="phh-placeholder-img" src="http://blackdancestories.org/wp-content/uploads/2021/11/2.png" alt="" >
+        </a>
+    <?php
+    }
+    ?>
+  </div>
+  <div class="young-artist-phh-desc-row row">
+      <div class="young-artist-phh-desc-col col-md">
+        <p class="young-artist-phh-desc"><?php echo $yp_desc ?></p>
+      </div>
+      
   </div>
     <?php
 }
