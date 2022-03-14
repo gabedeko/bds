@@ -24,7 +24,17 @@
         <div class="col-md-4 bd-hero-top-left">
             <div class="bd-hero-border"></div>
             <div class="bd-hero-date">
-                <p class="body-2"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></p>
+            <?php
+                    $bds_live_date = get_field('bds_live_date');
+            ?>
+                <p class="body-2"><i class="fas fa-circle"></i> <?php
+                if ($bds_live_date != null){
+                    echo $bds_live_date;
+                }
+                else {
+                    the_date('l, F j, Y'); 
+                }
+                ?></p>
             </div>
         </div>
         <div class="col-md-8 bd-hero-top-right" style="background-image:url(<?php echo get_the_post_thumbnail_url(); ?>)">
@@ -51,20 +61,26 @@
         <?php
                 $video_type = get_field('video_type');
                 $video_id = get_field('video_id');
+                $bds_live = get_field('bds_live');
         ?>
-        
-
-        <?php if ($video_type == 'youtube'){ ?>
+        <?php if ($video_id != null){
+        ?>
             <div class="talk-video-col col-md-10">
                 <iframe id="" class="bd-talk-video" width="" height="560" src="https://www.youtube.com/embed/<?php echo $video_id; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div> 
-        <?php } else if  ($video_type == 'vimeo') { ?>
-            <div class="talk-video-col col-md-10">
-                <iframe id="" class="bd-talk-video" src="https://player.vimeo.com/video/<?php echo $video_id; ?>" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            </div> 
-        <?php } else{
-            //Do nothing 
-        } ?>
+            </div>
+        <?php
+        } else {
+
+            if ($bds_live == true){
+                ?>
+                    <a class="talk-placeholder-link" href="https://www.eventbrite.com/e/black-dance-stories-live-tickets-290802456977" target="_blank">
+                        <img class="talk-placeholder-img" src="http://blackdancestories.org/wp-content/uploads/2022/03/bls_live_logo-scaled.jpg" alt="" >
+                    </a>
+                <?php
+            }
+        
+        }
+        ?>
         
     </div>
   <div class="talk-content-row row justify-content-md-center">

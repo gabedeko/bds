@@ -66,10 +66,13 @@
     <?php
 }
 ?>
+<?php if ($project) { ?>
     <hr class="bd-hr-0">
     <div class="row young-artist-project-row mt-4">
+    
         <h5 class="">Project</h5>
         <h2><?php echo $project ?></h2>
+    
         <?php
         if ($share_story_media) { ?>
         <div class="share-story-media"></div>
@@ -86,7 +89,7 @@
         }
         ?>
     </div>
-
+<?php } ?>
   
   <div class="row justify-content-md-center justify-content-md-center team-profile-social young-artist-social-row p-5">
   <?php 

@@ -113,7 +113,21 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
             <div class="bd-hero-border"></div>
             <div class="bd-hero-date">
             <?php if ( $the_query_1->have_posts() ) : while ( $the_query_1->have_posts() ) : $the_query_1->the_post(); ?>
-                <p class="body-2"><i class="fas fa-circle"></i> <?php the_date('l, F j, Y'); ?></p>
+            <?php
+                //If there is a future Live event date, ge that date
+                $bds_live_date = get_field('bds_live_date');
+            ?>
+                <p class="body-2"><i class="fas fa-circle"></i> 
+                <?php
+                    //If there is a future Live event date, dispay that instead of post date
+                    if ($bds_live_date != null){
+                        echo $bds_live_date;
+                    }
+                    else {
+                        the_date('l, F j, Y'); 
+                    }                  
+                ?>
+                </p>
             <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
             <?php wp_reset_query(); ?>
                 <?php /*<p class="body-2"><i class="fas fa-circle"></i> January 25, 2018</p>*/ ?>

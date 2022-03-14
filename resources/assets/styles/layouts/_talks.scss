@@ -6,11 +6,19 @@
 }
 
 .talk-content-container {
-    margin-top: 32vh;
+    @media (max-width: 767.98px) {
+        margin-top: 32vh;
+    }
+    
     .talk-video-row {
         .talk-video-col {
             border: 2px solid $bd-tan;
             padding: 24px;
+        }
+        .talk-placeholder-link {
+            .talk-placeholder-img {
+                width: 100%;
+            }
         }
     }
     .talk-content-row {

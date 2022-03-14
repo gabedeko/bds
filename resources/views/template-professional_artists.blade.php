@@ -18,7 +18,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
   <!--Loop 1: For the 3 posts above the showcase module-->
   <?php 
     $args_0 = array( 
-        'orderby' => 'title',
+        'orderby' => 'date',
         'order'   => 'DESC',
         'post_type' =>array('young_professional'),
         'post_status' => 'publish',
@@ -29,7 +29,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
   ?>
   <?php 
     $args_1 = array( 
-        'orderby' => 'title',
+        'orderby' => 'date',
         'order'   => 'DESC',
         'post_type' =>array('young_professional'),
         'post_status' => 'publish',
@@ -67,7 +67,7 @@ https://getbootstrap.com/docs/5.0/examples/masonry/
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid young-tabs-container">
   <ul class="nav nav-tabs young-tabs mb-3" id="youngTabs" role="tablist">
     <li class="nav-item young-tab young-tab-0" role="presentation">
       <button class="nav-link young-link-0 young-tab-link active" id="young-link-0" data-bs-toggle="tab" data-bs-target="#young-pane-0" type="button" role="tab" aria-controls="young-pane-0" aria-selected="true">POWER HALF-HOUR</button>
