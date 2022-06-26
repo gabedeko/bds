@@ -73,7 +73,7 @@
 
             if ($bds_live == true){
                 ?>
-                    <a class="talk-placeholder-link" href="https://www.eventbrite.com/e/black-dance-stories-live-tickets-290802456977" target="_blank">
+                    <a class="talk-placeholder-link" href="#" target="_blank">
                         <img class="talk-placeholder-img" src="http://blackdancestories.org/wp-content/uploads/2022/03/bls_live_logo-scaled.jpg" alt="" >
                     </a>
                 <?php
