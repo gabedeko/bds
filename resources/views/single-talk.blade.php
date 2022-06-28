@@ -9,7 +9,7 @@
     $episode_number = 'episode_' . get_field('episode_number');
     $args_0 = array( 
         'orderby' => 'ID',
-        'post_type' =>array('artist'),
+        'post_type' =>array('artist','team'),
         'post_status' => 'publish',
         'posts_per_page' => 20,
         'tag'   => $episode_number,
@@ -62,6 +62,8 @@
                 $video_type = get_field('video_type');
                 $video_id = get_field('video_id');
                 $bds_live = get_field('bds_live');
+                $promo_link = get_field('promo_link');
+                $promo_img =get_field('promo_img');
         ?>
         <?php if ($video_id != null){
         ?>
@@ -71,10 +73,10 @@
         <?php
         } else {
 
-            if ($bds_live == true){
+            if ($promo_img != null){
                 ?>
-                    <a class="talk-placeholder-link" href="#" target="_blank">
-                        <img class="talk-placeholder-img" src="http://blackdancestories.org/wp-content/uploads/2022/03/bls_live_logo-scaled.jpg" alt="" >
+                    <a class="talk-placeholder-link" href="<?php echo $promo_link; ?>" target="_blank">
+                        <img class="talk-placeholder-img" src="<?php echo $promo_img['url']; ?>" alt="" >
                     </a>
                 <?php
             }
