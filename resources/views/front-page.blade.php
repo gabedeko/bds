@@ -340,13 +340,13 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
 */ ?>
 <div class="container-fluid engage-container mt-5 mb-5">
     <div class="row engage-row">
-        <div class="col-md-4 engage-col">
+        <div class="col-md-6 engage-col">
             <h3 class="engage-title mt-2 mb-2">Join Our Newsletter</h3>
             <i class="engage-icon fas fa-paper-plane"></i>
             <p class="body-2 engage-copy mt-4 mb-4"> Join our mailing list to get weekly updates on our programs, screenings and special events</p>
             <a href="https://vr2.verticalresponse.com/s/websitesignupform40681930229779" target="_blank"><button type="button" class="btn bd-btn-3">Join Newsletter</button></a>
         </div>
-        <div class="col-md-4 engage-col">
+        <div class="col-md-6 engage-col">
             <h3 class="engage-title mt-2 mb-2">Donate</h3>
             <i class="engage-icon fas fa-donate"></i>
             <p class="body-2  engage-copy mt-4 mb-4">We appreciate any amount you can offer to the BDS team</p>
