@@ -352,12 +352,7 @@ if( $show_newsletter && in_array('Show Announcement', $show_newsletter) ) { ?>
             <p class="body-2  engage-copy mt-4 mb-4">We appreciate any amount you can offer to the BDS team</p>
             <a href="https://linktr.ee/blackdancestories" target="_blank"><button type="button" class="btn bd-btn-3">Donate</button></a>
         </div>
-        <div class="col-md-4 engage-col">
-            <h3 class="engage-title mt-2 mb-2">Become a Patron</h3>
-            <i class="engage-icon fab fa-patreon"></i>
-            <p class="body-2  engage-copy mt-4 mb-4"> Subscribe and support our Patreon for much more exclusive content</p>
-            <a href="https://www.patreon.com/blackdancestories" target="_blank"><button type="button" class="btn bd-btn-3">Visit Patreon</button></a>
-        </div>
+        
 </div>
 </div>
 <?php /*
